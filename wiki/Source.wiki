@@ -27,7 +27,7 @@ repo sync
 
 Setup beagleboard specific configurations and enabled components:
 {{{
-echo  “TARGET_PRODUCT := beagleboard”  > buildspec.mk
+echo "TARGET_PRODUCT := beagleboard” > buildspec.mk
 echo “INSTALL_PREBUILT_DEMO_APKS := true” >> buildspec.mk
 }}}
 
