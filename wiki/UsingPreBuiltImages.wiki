@@ -1,0 +1,36 @@
+#summary This page discusses using the pre-built 0xdroid images on Beagleboard quickly.
+
+= Introduction =
+
+Using the pre-built 0xdroid without having to [Source download and build the source] is hopefully working within minutes. There are a couple of ways to do this, primarily a NAND boot and an SD card boot.
+
+== Obtain Prebult Images ==
+
+You can fetch the pre-built images from [http://downloads.0xlab.org/release/ 0xdroid release] or the experimental [http://downloads.0xlab.org/dailybuild/ images built by daily-build host], then follow the instructions to install into Beagleboard environment.
+
+== for dummies ==
+ * Format the first partition over than 100MB with VFAT on a SD card. 
+ * Download the installer: [http://downloads.0xlab.org/installer/beagle-cupcake-0x2/uImage.bin uImage.bin] into SD card
+ * Download [http://downloads.0xlab.org/release/beagle-cupcake-0x2/0xkernel-beagle.bin 0xkernel-beagle.bin]
+ * Download [http://downloads.0xlab.org/release/beagle-cupcake-0x2/android-beagle.ubi android-beagle.ubi]
+ * Copy the installer uImage.bin image into the first partition of SD/MMC card
+ * Copy two files 0xkernel-beagle.bin and android-beagle.ubi into the first partition of SD/MMC card
+ * Plug the SD card in beagleboard SD slot and restart the beagleboard
+ * Wait for UI installer over.  The installer would perform NAND flashing and u-boot environment setup.
+ * Unplug SD card from the Beagleboard and reboot
+ * Enjoy!
+
+Format SD card detail under GNU/Linux:
+ * insert the SD card, wait it been detected, say /dev/mmcblk0 
+  *(It may be different with different SD device, you can check it via "dmesg")
+ * If any partition been mounted automatically, please umount them
+ * sudo fdisk /dev/mmcblk0
+  * press "d" delete the origin partitions
+  * press "n" creating new partition, select partition 1, and give over 100MB to it
+  * press "t" and select partition 1. Change the partition label to "b" (W95 FAT32)
+   * creating other partitions as you wish
+   * press "wq" write back and quit fdisk
+ * sudo mkfs.vfat -n DISK_INSTALLER /dev/mmcblk0p1
+
+== for geeks ==
+Check the [http://gitorious.org/0xdroid/pages/Nandboot nandboot] wiki as a reference. 
