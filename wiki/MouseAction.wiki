@@ -1,0 +1,7 @@
+#summary Mouse actions for 0xdroid
+
+0xdroid supports mouse/pointer for graphical operaions.  The behavior of mouse has been improved to fit Android.  Here are the operations:
+ * Left click: select
+ * Middle click: emit ‘Menu’ key
+ * Right click: emit ‘Back’ key
+ * Mouse scroll: emit ‘Up’ and ‘Down’ key
