@@ -1,0 +1,28 @@
+#summary Getting Project Source Code
+
+Our project is hosted at http://gitorious.org/0xdroid. For a more complete set of instructions, see the [http://gitorious.org/0xdroid/pages/Build-from-Scratch Build From Scratch] wiki page.
+
+Before you download the source, you will need [http://git-scm.com/ git] and [http://source.android.com/download/using-repo repo] tools.
+
+On an Ubuntu 9.04 host, you can do the following:
+
+Getting git:
+{{{
+$ sudo apt-get install git-core
+}}}
+Getting repo:
+{{{
+$ curl -o ~/bin/repo http://android.git.kernel.org/repo
+$ chmod a+x ~/bin/repo
+}}}
+You can find detailed repo installing instructions [http://source.android.com/download/using-repo here]
+
+To download the 0xdroid source code:
+{{{
+mkdir beagle-donut
+cd beagle-donut
+repo init -u git://gitorious.org/0xdroid/manifest.git -b beagle-donut
+echo  “TARGET_PRODUCT := beagleboard”  > buildspec.mk
+echo “INSTALL_PREBUILT_DEMO_APKS := true” >> buildspec.mk
+repo sync
+}}}
