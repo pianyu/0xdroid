@@ -17,13 +17,28 @@ $ chmod a+x ~/bin/repo
 }}}
 You can find detailed repo installing instructions [http://source.android.com/download/using-repo here]
 
-To download the 0xdroid source code:
+Download the 0xdroid source code:
 {{{
 mkdir beagle-donut
 cd beagle-donut
 repo init -u git://gitorious.org/0xdroid/manifest.git -b beagle-donut
+repo sync
+}}}
+
+Setup beagleboard specific configurations and enabled components:
+{{{
 echo  “TARGET_PRODUCT := beagleboard”  > buildspec.mk
 echo “INSTALL_PREBUILT_DEMO_APKS := true” >> buildspec.mk
-repo sync
+}}}
+
+Build as expected:
+{{{
 make
 }}}
+
+Once successfully built, the generated root file system is here:
+ * out/target/product/beagleboard/root/
+ * out/target/product/beagleboard/system/
+
+And the corresponding [http://www.linux-mtd.infradead.org/doc/ubifs.html UBIFS] system image for NAND flash:
+ * out/target/product/beagleboard/system.img
