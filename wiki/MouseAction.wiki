@@ -5,3 +5,5 @@
  * Middle click: emit ‘Menu’ key
  * Right click: emit ‘Back’ key
  * Mouse scroll: emit ‘Up’ and ‘Down’ key
+
+http://0xlab.org/~jserv/wiki/Mouse_buttons.png
