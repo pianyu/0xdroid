@@ -25,4 +25,5 @@ repo init -u git://gitorious.org/0xdroid/manifest.git -b beagle-donut
 echo  “TARGET_PRODUCT := beagleboard”  > buildspec.mk
 echo “INSTALL_PREBUILT_DEMO_APKS := true” >> buildspec.mk
 repo sync
+make
 }}}
