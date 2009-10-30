@@ -42,3 +42,14 @@ Once successfully built, the generated root file system is here:
 
 And the corresponding [http://www.linux-mtd.infradead.org/doc/ubifs.html UBIFS] system image for NAND flash:
  * out/target/product/beagleboard/system.img
+
+For advanced usage, fetch and build Linux kernel from scratch:
+{{{
+cd ..
+git clone git://gitorious.org/0xlab-kernel/kernel.git
+cd kernel
+git checkout -b kernel_omap3 origin/omap3
+make ARCH=arm omap3_beagle_defconfig
+make ARCH=arm CROSS_COMPILE=../beagle-donut/prebuilt/linux-x86/toolchain/arm-android-eabi-4.4.1/bin/arm-android-eabi- uImage
+make ARCH=arm CROSS_COMPILE=../beagle-donut/prebuilt/linux-x86/toolchain/arm-android-eabi-4.4.1/bin/arm-android-eabi- modules
+}}}
