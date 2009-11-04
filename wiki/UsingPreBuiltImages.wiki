@@ -10,7 +10,7 @@ You can fetch the pre-built images from [http://downloads.0xlab.org/release/ 0xd
 
 == Installation ==
 
-You can either use automated approach (for dummies) or go through the details (for geeks).
+Make sure that Beagleboard hardware is properly set up first.  Check wiki page [hardware_beagleboard] in advance.  You can either use automated approach (for dummies) or go through the details (for geeks).
 
 === for dummies ===
  * Format the first partition over than 100MB with VFAT on a SD card. 
