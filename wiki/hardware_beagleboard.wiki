@@ -34,21 +34,20 @@ To work with Beagleboard, you will need the following:
 
 We had tested with the EHCI port and verified that currently the EHCI port supports USB2.0 devices, however it does not support all the usb devices we had. (If all your device are USB 2.0 you may ignore this.)
 For example keyboard and mouse, and therefore we need to use the OTG port for our input devices.
-Easy way
+ * Easy way: [http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&site=US&KeyWords=10-00003-ND Buy from digikey]
+ * Geek way
+   * Buy a normal mini male to USB type A male line (Generally speaking, most A male to mini male lines are in this type). Then cut the cover of mini male’s head, and short pin 4 and 5. Recover the mini male’s head.
 
-Buy from digikey Click here
-Geek way
-
-Buy a normal mini male to USB type A male line (Generally speaking, most A male to mini male lines are in this type). Then cut the cover of mini male’s head, and short pin 4 and 5. Recover the mini male’s head.
 Then you can use this line to play with USB OTG.
-From beagleboard
-USB hub
+[http://picasaweb.google.com/lh/photo/oiOHhf-eiD47gfHC9xAQkg?feat=embedwebsite http://lh6.ggpht.com/_uSgEb50CjDE/Sc02CoGaQUI/AAAAAAAAAko/uY9CBlSNNbc/s144/DSCF0393.JPG]
+
+== USB hub ==
 
 We play with more than one devices, therefore we need a USB hub to play with. You can buy
-– A female to female head (easy to find)
-– a self-powered USB hub
+ * [http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&site=US&KeyWords=ae1474-nd A female to female head] (easy to find)
+ * a self-powered USB hub
 Please note that you will need self-powered USB hub because the usb OTG port may not have sufficient current for all devices.
-HDMI monitor
 
-    * find a monitor with HDMI or DVI-D interface (You can try TV as a monitor, but do NOT expect too much)
-    * find a HDMI to HDMI or DVI-D line
+== HDMI monitor ==
+ * find a monitor with HDMI or DVI-D interface (You can try TV as a monitor, but do NOT expect too much)
+ * find a HDMI to HDMI or DVI-D line
