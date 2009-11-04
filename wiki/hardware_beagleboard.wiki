@@ -32,8 +32,7 @@ To work with Beagleboard, you will need the following:
 
 == USB OTG Lines ==
 
-We had tested with the EHCI port and verified that currently the EHCI port supports USB2.0 devices, however it does not support all the usb devices we had. (If all your device are USB 2.0 you may ignore this.)
-For example keyboard and mouse, and therefore we need to use the OTG port for our input devices.
+EHCI port on Beagleboard is USB 2.0 only, and you need extra USB hub to use low speed USB 1.x devices, such as USB keyboard and mouse.  Instead, you can use the OTG port for input devices.
  * Easy way: [http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&site=US&KeyWords=10-00003-ND Buy from digikey]
  * Geek way
    * Buy a normal mini male to USB type A male line (Generally speaking, most A male to mini male lines are in this type). Then cut the cover of mini male’s head, and short pin 4 and 5. Recover the mini male’s head.
