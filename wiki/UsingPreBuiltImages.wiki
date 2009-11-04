@@ -8,7 +8,11 @@ Using the pre-built 0xdroid without having to [Source download and build the sou
 
 You can fetch the pre-built images from [http://downloads.0xlab.org/release/ 0xdroid release] or the experimental [http://downloads.0xlab.org/dailybuild/ images built by daily-build host], then follow the instructions to install into Beagleboard environment.
 
-== for dummies ==
+== Installation ==
+
+You can either use automated approach (for dummies) or go through the details (for geeks).
+
+=== for dummies ===
  * Format the first partition over than 100MB with VFAT on a SD card. 
  * Download the installer: [http://downloads.0xlab.org/installer/beagle-cupcake-0x2/uImage.bin uImage.bin] into SD card
  * Download [http://downloads.0xlab.org/release/beagle-cupcake-0x2/0xkernel-beagle.bin 0xkernel-beagle.bin]
@@ -32,5 +36,5 @@ Format SD card detail under GNU/Linux:
    * press "wq" write back and quit fdisk
  * sudo mkfs.vfat -n DISK_INSTALLER /dev/mmcblk0p1
 
-== for geeks ==
+=== for geeks ===
 Check the [http://gitorious.org/0xdroid/pages/Nandboot nandboot] wiki as a reference. 
