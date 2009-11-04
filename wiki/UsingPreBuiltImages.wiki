@@ -37,4 +37,4 @@ Format SD card detail under GNU/Linux:
  * sudo mkfs.vfat -n DISK_INSTALLER /dev/mmcblk0p1
 
 === for geeks ===
-Check the [http://gitorious.org/0xdroid/pages/Nandboot nandboot] wiki as a reference. 
+Check wiki page [boot_nand] as reference. 
