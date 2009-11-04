@@ -25,6 +25,14 @@ repo init -u git://gitorious.org/0xdroid/manifest.git -b beagle-donut
 repo sync
 }}}
 
+Alternatively, use faster git mirror if encountering the problem during 'repo sync':
+{{{
+repo init -u git://git.0xlab.org/manifest.git -b beagle-donut
+sed -i -e 's#git://gitorious.org/0xdroid/#git://git.0xlab.org/#'
+.repo/manifests/default.xml
+repo sync 
+}}}
+
 Setup beagleboard specific configurations and enabled components:
 {{{
 echo "TARGET_PRODUCT := beagleboard” > buildspec.mk
