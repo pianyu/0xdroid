@@ -4,7 +4,7 @@ Welcome to the Wiki of the 0xdroid project -- [http://0xlab.org/ 0xlab]'s effort
 
 = Our focus =
 
-The focus of this Wiki is to centralise 0xdroid specific information and how to get it running on the Beagleboard / TI OMAP3 derived boards.  The Wiki includes information on how to [UsingPreBuiltImages download and install 0xdroid], how to use specific parts (like the ADB shell), what features of the 0xdroid are currently functional and how you can contribute to improve the release.
+The focus of this Wiki is to centralise 0xdroid specific information and how to get it running on the Beagleboard / TI OMAP3 derived boards.  The Wiki includes information on how to [UsingPreBuiltImages download and install 0xdroid], how to use specific parts (like the [MouseAction mouse actions]), what features of the 0xdroid are currently functional and how you can contribute to improve the release.
 
 Browse through the menu section on your left to find those details you are looking for.
 
