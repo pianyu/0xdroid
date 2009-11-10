@@ -10,7 +10,7 @@ Beagleboard# setenv optargs ‘init=/init omapdss.def_disp=dvi omapfb.mode=dvi:1
 Beagleboard# saveenv
 }}}
 
-= flash Linux Kernel =
+= Flash Linux Kernel =
 
 Put kernel into SD card first partition, VFAT format. Named as “uImage.bin” (you can check [http://code.google.com/p/beagleboard/wiki/HowToGetAngstromRunning HowToGetAngstromRunning] as SD card as reference)
 {{{
@@ -21,7 +21,7 @@ Beagleboard# nand erase 280000 400000
 Beagleboard# nand write ${loadaddr} 280000 400000
 }}}
 
-= flash Root File system =
+= Flash Root File system =
  * untar the [http://0xlab.org/~tick/lazy_flash_SD_image.tar.bz2 tarball] into SD card second partition. 
  * put your android_beagle.ubi image into /media//home/root/
  * boot from SD
