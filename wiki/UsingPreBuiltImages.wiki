@@ -26,9 +26,31 @@ Make sure that Beagleboard hardware is properly set up first.  Check wiki page [
 
 Format SD card detail under GNU/Linux:
  * insert the SD card, wait it been detected, say /dev/mmcblk0 
-  *(It may be different with different SD device, you can check it via "dmesg")
- * If any partition been mounted automatically, please umount them
- * sudo fdisk /dev/mmcblk0
+  * It may be different with different SD device, you can check it via "dmesg")
+{{{
+dmesg | tail
+}}}
+  You should see something like -
+{{{
+scsi 5:0:0:0: Direct-Access     Multi    Flash Reader     1.00 PQ: 0 ANSI: 0
+sd 5:0:0:0: Attached scsi generic sg2 type 0
+usb-storage: device scan complete
+sd 5:0:0:0: [sdb] Attached SCSI removable disk
+sd 5:0:0:0: [sdb] 3862528 512-byte logical blocks: (1.97 GB/1.84 GiB)
+sd 5:0:0:0: [sdb] Assuming drive cache: write through
+sd 5:0:0:0: [sdb] Assuming drive cache: write through
+ sdb: sdb1 sdb2
+}}}
+  If you are using the built-in SD/MMC slot, the device name would be /dev/mmcblk?
+ * If any partition been mounted automatically, please umount.
+ * According to the above device name about SD/MMC, format/make partition:
+{{{
+sudo fdisk /dev/mmcblk0
+}}}
+ or
+{{{
+sudo fdisk /dev/sdb
+}}}
   * press "d" delete the origin partitions
   * press "n" creating new partition, select partition 1, and give over 100MB to it
   * press "t" and select partition 1. Change the partition label to "b" (W95 FAT32)
