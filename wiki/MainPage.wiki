@@ -1,6 +1,6 @@
 = Welcome =
 
-Welcome to the Wiki of the 0xdroid project -- 0xlab's effort to create a community-based Android distribution.  0xlab develops Android distributions and attempts to introduce some improvements, such as wireless communication, performance, usability, etc. Currently, 0xdroid supports TI Beagleboard as reference hardware.
+Welcome to the Wiki of the 0xdroid project -- [http://0xlab.org/ 0xlab]'s effort to create a community-based Android distribution.  [http://0xlab.org/ 0xlab] develops Android distributions and attempts to introduce some improvements, such as wireless communication, performance, usability, etc. Currently, 0xdroid supports TI Beagleboard as reference hardware.
 
 = Our focus =
 
