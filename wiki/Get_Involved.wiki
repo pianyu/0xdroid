@@ -1,0 +1,19 @@
+#summary How to Get Involved in 0xdroid/0xlab Development
+
+There are many ways to get involved with the 0xdroid project.
+
+== Become a user of 0xdroid ==
+
+ * Try 0xlab's own Android distribution : using pre-built images or build from source
+ * Give feedbacks via IRC #0xlab or the 0xlab mailing list:
+    * General discussion: http://groups.google.com/group/0xlab-discuss
+    * Technical / Development: http://groups.google.com/group/0xlab-devel
+ * If you find an issue or bug, file a project issue
+
+== Share your 0xdroid knowledge ==
+
+ * Write blog, wiki articles, or participate in discussions
+
+== Submit code ==
+
+ * Send your patches to the mailing list, http://groups.google.com/group/0xlab-devel
