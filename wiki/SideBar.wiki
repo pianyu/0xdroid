@@ -1,7 +1,7 @@
   * How to
     * [Source Get the Source]
     * [UsingPreBuiltImages Use Prebuilt Image]
-    * [boot_nand Boot from Nand]
+    * [boot_nand Boot from NAND Flash]
   * Information
     * [hardware_beagleboard Hardware: Beagleboard]
     * [MouseAction Mouse Action inside UI environment]
