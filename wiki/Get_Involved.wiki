@@ -8,12 +8,12 @@ There are many ways to get involved with the 0xdroid project.
  * Give feedbacks via IRC #0xlab or the 0xlab mailing list:
     * General discussion: http://groups.google.com/group/0xlab-discuss
     * Technical / Development: http://groups.google.com/group/0xlab-devel
- * If you find an issue or bug, file a project issue
+ * If you find an issue or bug, please file a project issue: http://code.google.com/p/0xdroid/issues/list
 
 == Share your 0xdroid knowledge ==
 
- * Write blog, wiki articles, or participate in discussions
+ * Write blog, wiki articles, or participate in discussions: http://groups.google.com/group/0xlab-discuss
 
 == Submit code ==
 
- * Send your patches to the mailing list, http://groups.google.com/group/0xlab-devel
+ * Send your patches to the mailing list: http://groups.google.com/group/0xlab-devel
