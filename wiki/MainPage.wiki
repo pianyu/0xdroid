@@ -1,5 +1,3 @@
-#summary 0xdroid Wiki Main Page
-
 = Welcome =
 
 Welcome to the Wiki of the 0xdroid project -- 0xlab's effort to create a community-based Android distribution.  0xlab develops Android distributions and attempts to introduce some improvements, such as wireless communication, performance, usability, etc. Currently, 0xdroid supports TI Beagleboard as reference hardware.
@@ -10,4 +8,9 @@ The focus of this Wiki is to centralise 0xdroid specific information and how to 
 
 Browse through the menu section on your left to find those details you are looking for.
 
+= Get Involved =
 
+ * Give feedbacks via IRC [http://webchat.freenode.net/?channels=0xlab #0xlab] or the 0xlab mailing list:
+   * General discussion: http://groups.google.com/group/0xlab-discuss
+   * Technical / Development: http://groups.google.com/group/0xlab-devel 
+ * If you find an issue or bug, please file a project issue: http://code.google.com/p/0xdroid/issues/list 
