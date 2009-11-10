@@ -1,10 +1,9 @@
 #sidebar TableOfContents
 
-How to
  * [Source Get the Source]
  * [UsingPreBuiltImages Use Prebuilt Image]
  * [Get_Involved Get Involved]
- * [boot_nand Boot from NAND Flash]
-Information
- * [hardware_beagleboard Hardware: Beagleboard]
- * [MouseAction Mouse Action inside UI environment]
+ * Information
+   * [hardware_beagleboard Hardware: Beagleboard]
+   * [MouseAction Mouse Action inside UI environment]
+   * [boot_nand Boot from NAND Flash]
