@@ -4,7 +4,7 @@ There are many ways to get involved with the 0xdroid project.
 
 == Become a user of 0xdroid ==
 
- * Try 0xlab's own Android distribution : using pre-built images or build from source
+ * Try 0xlab's own Android distribution : using [UsingPreBuiltImages pre-built images] or [Source build from source]
  * Give feedbacks via IRC [http://webchat.freenode.net/?channels=0xlab #0xlab] or the 0xlab mailing list:
     * General discussion: http://groups.google.com/group/0xlab-discuss
     * Technical / Development: http://groups.google.com/group/0xlab-devel
