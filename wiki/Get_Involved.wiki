@@ -13,6 +13,7 @@ There are many ways to get involved with the 0xdroid project.
 == Share your 0xdroid knowledge ==
 
  * Write blog, wiki articles, or participate in discussions: http://groups.google.com/group/0xlab-discuss
+ * Blog aggregator of 0xlab developers: [http://planet.0xlab.org/ Planet 0xlab]
  * We're currently building the Wiki pages. If you think there are ways for us to improve the Wiki, feel free to contact one of the authors (see mail link at the bottom of each page). 
 
 == Submit code ==
