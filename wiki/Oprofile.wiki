@@ -1,0 +1,94 @@
+#Mini how-to to oprofile 0xdroid
+
+= Profiling 0xdroid = 
+
+This document describes how to do system wise profiling via oprofile in 0xdroid.
+Original Android supports oprofile, however it only supports ARMv6.
+In beagle-cupcake our target device is beagleboard, in which is powered via omap3530 with ARMv7 arch.
+Therefore we did some hack around the external/oprofile and update new prebuild oprofile utils and let the oprofile supports ARMv7.
+The prebuild files change nothing but using the same architecture table in external/oprofile.
+Therefore you will need to use the prebuild opreport to analysis the logs.
+
+The following is a mini how-to of using it.
+== Kernel setting == 
+
+0xdroid kernel does not enable oprofile flag in default. You need to turn it on by your self.
+You can reference to Build-from-Scratch and build your own kernel.
+To enable OPROFILE flags you will need to turn the following flags on:
+{{{
+ + CONFIG_OPROFILE_ARMV7=y
+ + CONFIG_OPROFILE=y
+ + CONFIG_PROFILING=y
+ + CONFIG_HAVE_OPROFILE=y
+ + CONFIG_TRACEPOINTS=y
+}}}
+Run on beagleboard
+
+You can use opcontrol to start and stop profiling on beagleboard. You can also choose logging kernel symbols or not.
+If you want to log kernel symbols you need to put the vmlinux into beagleboard, in my case I put that on a usb mass storage.
+and mount that on /sdcard
+
+{{{
+/system/bin/mount -t vfat /dev/block/sda1 /sdcard
+setprop EXTERNAL_STORAGE_STATE mounted
+am broadcast -a android.intent.action.MEDIA_MOUNTED —ez read-only false -d file:///sdcard
+}}}
+
+Before starting profiling you will need to setup the oprofile, you can reference to oprofile manual.
+Here is how I setup the oprofile:
+
+{{{
+opcontrol —setup —event=CPU_CYCLES:15000:::1:1 —vmlinux=/sdcard/vmlinux —kernel-range=0xc0008000,0xcfffffff
+echo 16 > /dev/oprofile/backtrace_depth
+opcontrol —start
+}}}
+
+Then do activity you want to be profiled.
+After finish do the following command to stop profiling.
+
+{{{
+opcontrol —stop
+}}}
+
+== Analysis == 
+
+After profiling, you will need to move all the data to host to do analysis. Therefore you can choose use usb ethernet to do such task.
+Connecting beagleboard
+
+On device:
+ * plug in usb line between laptop and beagleboard (OTG port)
+ * netcfg usb0 up
+ * ifconfig usb0 192.168.0.202
+On laptop:
+ * sudo ifconfig usb0 192.168.0.200 # beware nm-applet may breaks it, you can set it up.
+ * export ADBHOST=192.168.0.202
+ * export PATH={Where you put 0xdroid}/out/host/linux-x86/bin:$PATH
+ * pkill adb
+ * adb devices # If you can see the device then you can do next step, or you may need to checkout what’s wrong.
+opimport_pull
+
+Using the script *external/oprofile/opimport_pull* to pull down samples and analysis them.
+
+{{{
+cd {Where you put 0xdroid}
+. build/envsetup.sh
+setpaths
+export OPROFILE_EVENTS_DIR=${PWD}/linux-x86/oprofile/
+cd external/oprofile
+./opimport_pull /tmp/beagle-cupcake-oprofile
+}}}
+
+Then the script will pull down samples from beagleboard and do the symbol analysis once for you.
+If you want to dig out more information, you can use:
+
+{{{
+cp ${Where you build your kernel}/vmlinux ${OUT}/symbols
+${OPROFILE_EVENTS_DIR}/bin/opreport —session-dir=/tmp/beagle-cupcake-oprofile -p ${OUT}/symbols -d
+}}}
+
+Enjoy it!
+
+== for geeks ==
+
+You can check the script of opimport_pull and do whatever you want, even add graphvis supports.
+You can also move out the /data/oprofile to other SD card and so that you can not using opimport_pull.
