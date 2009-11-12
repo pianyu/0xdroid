@@ -78,7 +78,7 @@ ${OPROFILE_EVENTS_DIR}/bin/opreport —session-dir=/tmp/beagle-cupcake-oprofile 
 
 Enjoy it!
 
-== for geeks ==
+== Appendix ==
 
 You can check the script of opimport_pull and do whatever you want, even add graphvis supports.
 You can also move out the /data/oprofile to other SD card and so that you can not using opimport_pull.
