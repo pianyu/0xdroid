@@ -7,6 +7,6 @@
    * [hardware_beagleboard Hardware: Beagleboard]
    * [MouseAction Mouse Action inside UI environment]
    * [boot_nand Boot from NAND Flash]
-   * [Oprofile Oprofile the 0xdroid]
+   * [Oprofile Profiling 0xdroid]
 
  [http://code.google.com/p/0xdroid/w/list All wiki pages]
