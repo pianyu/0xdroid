@@ -43,7 +43,7 @@ sd 5:0:0:0: [sdb] Assuming drive cache: write through
 }}}
   If you are using the built-in SD/MMC slot, the device name would be /dev/mmcblk?
  * If any partition been mounted automatically, please umount.
- * According to the above device name about SD/MMC, format/make partition:
+ * According to the above device name about SD/MMC, create and format the partitions:
 {{{
 sudo fdisk /dev/mmcblk0
 }}}
@@ -54,9 +54,29 @@ sudo fdisk /dev/sdb
   * press "d" delete the origin partitions
   * press "n" creating new partition, select partition 1, and give over 100MB to it
   * press "t" and select partition 1. Change the partition label to "b" (W95 FAT32)
-   * creating other partitions as you wish
-   * press "wq" write back and quit fdisk
- * sudo mkfs.vfat -n DISK_INSTALLER /dev/mmcblk0p1
+   * creating other partitions as you wish (optional)
+  * press "p" to confirm the partitions.  The reference output:
+{{{
+Command (m for help): p
+
+Disk /dev/sdd: 1977 MB, 1977614336 bytes
+64 heads, 63 sectors/track, 957 cylinders
+Units = cylinders of 4032 * 512 = 2064384 bytes
+Disk identifier: 0x00000000
+
+Device Boot      Start         End      Blocks   Id  System
+/dev/sdd1            1          30       60448+   b  W95 FAT32
+/dev/sdd2           31         957     1868832   83  Linux
+}}}
+  * press "wq" write back and quit fdisk
+ * Format the partition for use: 
+{{{
+sudo mkfs.vfat -n DISK_INSTALLER /dev/mmcblk0p1
+}}}
+ or
+{{{
+sudo mkfs.vfat -n DISK_INSTALLER /dev/sdb1
+}}}
 
 === for geeks ===
 Check wiki page [boot_nand] as reference. 
