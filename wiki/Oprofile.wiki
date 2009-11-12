@@ -1,8 +1,8 @@
-#Mini how-to to oprofile 0xdroid
+#summary how-to to oprofile 0xdroid
 
 = Profiling 0xdroid = 
 
-This document describes how to do system wise profiling via oprofile in 0xdroid.
+This page describes how to do system wise profiling via oprofile in 0xdroid.
 Original Android supports oprofile, however it only supports ARMv6.
 In beagle-cupcake our target device is beagleboard, in which is powered via omap3530 with ARMv7 arch.
 Therefore we did some hack around the external/oprofile and update new prebuild oprofile utils and let the oprofile supports ARMv7.
