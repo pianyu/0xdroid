@@ -12,7 +12,8 @@ Beagleboard# saveenv
 
 = Flash Linux Kernel =
 
-Put kernel into SD card first partition, VFAT format. Named as “uImage.bin” (you can check [http://code.google.com/p/beagleboard/wiki/HowToGetAngstromRunning HowToGetAngstromRunning] as SD card as reference)
+Put kernel into SD card first partition, VFAT format. Named as "uImage.bin" (you can check [http://code.google.com/p/beagleboard/wiki/HowToGetAngstromRunning HowToGetAngstromRunning] as SD card as reference)
+ * NOTE: for Beagleboard rev B7, the kernel image name should be "uImage" instead of "uImage.bin".
 {{{
 Beagleboard# mmcinit
     or mmc init (depends on your u-boot)
