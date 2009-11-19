@@ -24,6 +24,7 @@ Beagleboard# nand write ${loadaddr} 280000 400000
 = Flash Root File system =
  * untar the [http://0xlab.org/~tick/lazy_flash_SD_image.tar.bz2 tarball] into SD card second partition. 
  * put your android_beagle.ubi image into /media//home/root/
+  * If you [Source build from scratch], rename from 'out/target/product/beagleboard/system.img' to 'android_beagle.ubi'.
  * boot from SD
  * flash_eraseall /dev/mtd4
  * nandwrite /dev/mtd4 android-beagle.ubi
