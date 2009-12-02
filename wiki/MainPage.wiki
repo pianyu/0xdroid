@@ -11,7 +11,7 @@ The reason why [http://0xlab.org/ 0xlab] has to construct yet another project de
   * Peripheral support
     * Device: WiFi, Bluetooth, WebCam, Accelerometer, GSM modem / 3G data card
     * Software: corresponding software development such as Bluetooth OBEX.
-  * Performance: use NEON instruction set introduced in ARM Coretex A8, and enable SoC specific functionality to accelerate the computing such as video playback.
+  * Performance: use NEON instruction set introduced in ARM Cortex A8, and enable SoC specific functionality to accelerate the computing such as video playback.
   * Multimedia
   * Usability and visual enhancements
 
