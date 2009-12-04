@@ -4,7 +4,9 @@ Our project is hosted at http://gitorious.org/0xdroid. For a more complete set o
 
 == Precondition: Sun JDK ==
 
-NOTE: You would need Sun JDK version 1.5 to build Donut.  However, Sun JDK version 1.5 is known to be EOL (End-Of-Line), and Ubuntu Linux 9.10 no longer ships with sun-java5-jdk.  If you are using Ubuntu Linux 9.10, just add these two line in file /etc/apt/sources.list:
+You would need Sun JDK version 1.5 to build Donut.  However, Sun JDK version 1.5 is known to be EOL (End-Of-Line), and Ubuntu Linux 9.10 no longer ships with sun-java5-jdk.
+
+If you are using Ubuntu Linux 9.10, just add these two line in file /etc/apt/sources.list:
 {{{
 deb http://us.archive.ubuntu.com/ubuntu/ karmic-updates multiverse
 deb-src http://us.archive.ubuntu.com/ubuntu/ karmic-updates multiverse
