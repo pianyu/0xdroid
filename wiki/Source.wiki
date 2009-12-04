@@ -43,31 +43,31 @@ You can find detailed repo installing instructions [http://source.android.com/do
 
 Download the 0xdroid source code:
 {{{
-mkdir beagle-donut
-cd beagle-donut
-repo init -u git://gitorious.org/0xdroid/manifest.git -b beagle-donut
-repo sync
+$ mkdir beagle-donut
+$ cd beagle-donut
+$ repo init -u git://gitorious.org/0xdroid/manifest.git -b beagle-donut
+$ repo sync
 }}}
 
 Alternatively, use faster git mirror if encountering the problem during 'repo sync':
 {{{
-repo init -u git://git.0xlab.org/manifest.git -b beagle-donut
-sed -i -e 's#git://gitorious.org/0xdroid/#git://git.0xlab.org/#'
+$ repo init -u git://git.0xlab.org/manifest.git -b beagle-donut
+$ sed -i -e 's#git://gitorious.org/0xdroid/#git://git.0xlab.org/#'
 .repo/manifests/default.xml
-repo sync 
+$ repo sync 
 }}}
 
 == Build 0xdroid from source ==
 
 Setup beagleboard specific configurations and enabled components:
 {{{
-echo "TARGET_PRODUCT := beagleboard” > buildspec.mk
-echo “INSTALL_PREBUILT_DEMO_APKS := true” >> buildspec.mk
+$ echo "TARGET_PRODUCT := beagleboard” > buildspec.mk
+$ echo “INSTALL_PREBUILT_DEMO_APKS := true” >> buildspec.mk
 }}}
 
 Build as expected:
 {{{
-make
+$ make
 }}}
 
 Once successfully built, the generated root file system is here:
@@ -79,11 +79,11 @@ And the corresponding [http://www.linux-mtd.infradead.org/doc/ubifs.html UBIFS] 
 
 For advanced usage, fetch and build Linux kernel from scratch:
 {{{
-cd ..
-git clone git://gitorious.org/0xlab-kernel/kernel.git
-cd kernel
-git checkout -b kernel_omap3 origin/omap3
-make ARCH=arm omap3_beagle_defconfig
-make ARCH=arm CROSS_COMPILE=../beagle-donut/prebuilt/linux-x86/toolchain/arm-android-eabi-4.4.1/bin/arm-android-eabi- uImage
-make ARCH=arm CROSS_COMPILE=../beagle-donut/prebuilt/linux-x86/toolchain/arm-android-eabi-4.4.1/bin/arm-android-eabi- modules
+$ cd ..
+$ git clone git://gitorious.org/0xlab-kernel/kernel.git
+$ cd kernel
+$ git checkout -b kernel_omap3 origin/omap3
+$ make ARCH=arm omap3_beagle_defconfig
+$ make ARCH=arm CROSS_COMPILE=../beagle-donut/prebuilt/linux-x86/toolchain/arm-android-eabi-4.4.1/bin/arm-android-eabi- uImage
+$ make ARCH=arm CROSS_COMPILE=../beagle-donut/prebuilt/linux-x86/toolchain/arm-android-eabi-4.4.1/bin/arm-android-eabi- modules
 }}}
