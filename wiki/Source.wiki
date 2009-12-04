@@ -2,7 +2,7 @@
 
 Our project is hosted at http://gitorious.org/0xdroid. For a more complete set of instructions, see the [http://gitorious.org/0xdroid/pages/Build-from-Scratch Build From Scratch] wiki page.
 
-NOTE: You would need Sun JDK version 1.5 to build Donut.  However, Sun JDK version 1.5 is known to be EOL (End-Of-Line), and Ubuntu Linux 9.10 no longer ships with sun-java5-jdk.  If you are using Ubuntu Linux 9.10, just add these two line on your sources.list under directory /etc/apt:
+NOTE: You would need Sun JDK version 1.5 to build Donut.  However, Sun JDK version 1.5 is known to be EOL (End-Of-Line), and Ubuntu Linux 9.10 no longer ships with sun-java5-jdk.  If you are using Ubuntu Linux 9.10, just add these two line in file /etc/apt/sources.list:
 {{{
 deb http://us.archive.ubuntu.com/ubuntu/ karmic-updates multiverse
 deb-src http://us.archive.ubuntu.com/ubuntu/ karmic-updates multiverse
@@ -12,6 +12,11 @@ and install Sun JDK 1.5:
 sudo apt-get update
 sudo apt-get install sun-java5-jdk
 }}}
+To set the system to use Java 5 you need to update your java alternatives by running
+{{{
+$ sudo update-alternatives --config java
+}}}
+Choose java-1.5.0-sun and you should be done.
 
 Before you download the source, you will need [http://git-scm.com/ git] and [http://source.android.com/download/using-repo repo] tools.
 
