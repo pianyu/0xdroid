@@ -2,6 +2,8 @@
 
 Our project is hosted at http://gitorious.org/0xdroid. For a more complete set of instructions, see the [http://gitorious.org/0xdroid/pages/Build-from-Scratch Build From Scratch] wiki page.
 
+== Precondition: Sun JDK ==
+
 NOTE: You would need Sun JDK version 1.5 to build Donut.  However, Sun JDK version 1.5 is known to be EOL (End-Of-Line), and Ubuntu Linux 9.10 no longer ships with sun-java5-jdk.  If you are using Ubuntu Linux 9.10, just add these two line in file /etc/apt/sources.list:
 {{{
 deb http://us.archive.ubuntu.com/ubuntu/ karmic-updates multiverse
@@ -18,6 +20,8 @@ $ sudo update-alternatives --config java
 }}}
 Choose java-1.5.0-sun and you should be done.
 
+== Precondition: git and repo ==
+
 Before you download the source, you will need [http://git-scm.com/ git] and [http://source.android.com/download/using-repo repo] tools.
 
 On an Ubuntu 9.04 host, you can do the following:
@@ -32,6 +36,8 @@ $ curl -o ~/bin/repo http://android.git.kernel.org/repo
 $ chmod a+x ~/bin/repo
 }}}
 You can find detailed repo installing instructions [http://source.android.com/download/using-repo here]
+
+== Get 0xdroid source ==
 
 Download the 0xdroid source code:
 {{{
@@ -48,6 +54,8 @@ sed -i -e 's#git://gitorious.org/0xdroid/#git://git.0xlab.org/#'
 .repo/manifests/default.xml
 repo sync 
 }}}
+
+== Build 0xdroid from source ==
 
 Setup beagleboard specific configurations and enabled components:
 {{{
