@@ -1,0 +1,15 @@
+#summary Reference Benchmark Results
+
+== Testing Environment ==
+
+Beagleboard (TI OMAP353x) runs at 500 MHz
+
+== CPU Tests ==
+
+armv7-beagle-donut
+{{{
+CPU: Dhrystones:        39918.0 stones/sec
+CPU: Whetstones(10):    26874.0 KWIPS
+CPU: Himeno:    3.3709999322891235 
+CPU: Spectral Normalization:    1996.0 msec
+}}}
