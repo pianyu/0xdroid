@@ -19,6 +19,7 @@
   * Mouse stability fix (Issue #26)
   * Dalvik stability fix (Issue #25)
   * elfcopy .debug section reordering (Issue #20)
+  * Tweak web browser preference to use desktop services instead of mobile ones
 
 
 == Beagle-cupcake-0x2 ==
