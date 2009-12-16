@@ -50,7 +50,7 @@
   * Ethernet support + USB OTG network (Issue #39)
   * ARM NEON optimizations for PixelFlinger up to 5x speedup
   * Flexible resolution support for Launcher (Issue #29)
-  * Camera / OpenCORE HAL migration to Donut (Issue Issue #32, Issue #34)
+  * Camera / OpenCORE HAL migration to Donut (Issue #32, Issue #34)
   * Camera capture / recording fix (Issue #35, Issue #40, Issue #41)
   * Mouse stability fix (Issue #26)
   * Dalvik stability fix (Issue #25)
