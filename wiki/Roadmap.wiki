@@ -1,22 +1,23 @@
 #summary This page contains the 0xdroid Roadmap
 
-== Beagle-cupcake-0x1 ==
+== Beagle-donut-0x3 ==
 
- * Release Date: Aug 7, 2009
+ * Release date: ???
  * Changes:
-   * Product for beagleboard
-   * Revised initialization sequence for Beagleboard related settings
-   * Replace yaffs2 with new and fast flash file system -- ubifs
-   * Add software cursor and new keyboard layouts
-   * ARMv7 tuned GNU toolchain based on gcc 4.4.1 (ARM NEON and Thumb2)
-   * Tweaked memory operation routines for Cortex A8 to gain better performance
-   * Enable ALSA for sound.
-   * Provide GPIO keyboard
-   * Fix the framebuffer flipping issue
-   * Disable battery check for beagleboard
-   * Disable unusable camera/video force rotation
-   * Dalvik backports from donut
-   * Several bug fixes. 
+  * External GSM modem for functional Android Telephony/RIL (Issue #3, Issue #43)
+  * Bluetooth OBEX/OPP/FTP support (Issue #49)
+  * Motion sensor support (Issue #50)
+  * Android theme selector (Issue #48)
+  * Ethernet support + USB OTG network (Issue #38, Issue #39, Issue #44, Issue #53)
+  * ARM NEON/SIMD optimizations for PixelFlinger up to 5x speedup
+  * Flexible resolution support for Launcher (Issue #29)
+  * Camera / OpenCORE HAL migration to Donut (Issue #32, Issue #34)
+  * Camera capture / recording fix (Issue #35, Issue #40, Issue #41)
+  * Mouse stability fix (Issue #26)
+  * Dalvik stability fix (Issue #25)
+  * elfcopy .debug section reordering (Issue #20)
+  * Dalvik VM from Eclair has been back-ported. CaffeineMarkEmbedded results up to 2.71x.
+  * Fix signal strength issues with Linux Wireless Extension (Issue #28)
 
 == Beagle-cupcake-0x2 ==
 
@@ -39,21 +40,20 @@
    * Introduce virtual touchscreen device on Beagleboard to satisfy more touch-driven applications
    * experimental package management system
 
-== Beagle-donut-0x3 ==
+== Beagle-cupcake-0x1 ==
 
- * Release date: ???
+ * Release Date: Aug 7, 2009
  * Changes:
-  * External GSM modem for functional Android Telephony/RIL (Issue #3, Issue #43)
-  * Bluetooth OBEX/OPP/FTP support (Issue #49)
-  * Motion sensor support (Issue #50)
-  * Android theme selector (Issue #48)
-  * Ethernet support + USB OTG network (Issue #38, Issue #39, Issue #44, Issue #53)
-  * ARM NEON/SIMD optimizations for PixelFlinger up to 5x speedup
-  * Flexible resolution support for Launcher (Issue #29)
-  * Camera / OpenCORE HAL migration to Donut (Issue #32, Issue #34)
-  * Camera capture / recording fix (Issue #35, Issue #40, Issue #41)
-  * Mouse stability fix (Issue #26)
-  * Dalvik stability fix (Issue #25)
-  * elfcopy .debug section reordering (Issue #20)
-  * Dalvik VM from Eclair has been back-ported. CaffeineMarkEmbedded results up to 2.71x.
-  * Fix signal strength issues with Linux Wireless Extension (Issue #28)
+   * Product for beagleboard
+   * Revised initialization sequence for Beagleboard related settings
+   * Replace yaffs2 with new and fast flash file system -- ubifs
+   * Add software cursor and new keyboard layouts
+   * ARMv7 tuned GNU toolchain based on gcc 4.4.1 (ARM NEON and Thumb2)
+   * Tweaked memory operation routines for Cortex A8 to gain better performance
+   * Enable ALSA for sound.
+   * Provide GPIO keyboard
+   * Fix the framebuffer flipping issue
+   * Disable battery check for beagleboard
+   * Disable unusable camera/video force rotation
+   * Dalvik backports from donut
+   * Several bug fixes.
