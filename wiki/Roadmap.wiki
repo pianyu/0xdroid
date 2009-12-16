@@ -1,0 +1,58 @@
+#summary This page contains the 0xdroid Roadmap
+
+== Beagle-cupcake-0x1 ==
+
+ * Release Date: Aug 7, 2009
+ * Changes:
+   * Product for beagleboard
+   * Revised initialization sequence for Beagleboard related settings
+   * Replace yaffs2 with new and fast flash file system -- ubifs
+   * Add software cursor and new keyboard layouts
+   * ARMv7 tuned GNU toolchain based on gcc 4.4.1 (ARM NEON and Thumb2)
+   * Tweaked memory operation routines for Cortex A8 to gain better performance
+   * Enable ALSA for sound.
+   * Provide GPIO keyboard
+   * Fix the framebuffer flipping issue
+   * Disable battery check for beagleboard
+   * Disable unusable camera/video force rotation
+   * Dalvik backports from donut
+   * Several bug fixes. 
+
+== Beagle-cupcake-0x2 ==
+
+ * Release Date: Oct 9. 2009
+ * Changes:
+   * Brand-new Home/Launcher with visual enhancement
+   * New Camera HAL with performance tweaks
+   * OMAP3 hardware video overlays support for OpenCORE rendering
+   * Automatic video output scaling
+   * Revised Audio In/Out support
+   * New software cursor from android-x86
+   * Volume manager supports SD/MMC and USB Mass Storage
+   * Dalvik VM performance improvement
+   * Memory leaks and race condition fixes
+   * ARM NEON and Thumb2 optimized bionic/libcutils
+   * ARM NEON optimizations for skia
+   * Enable oprofile for ARMv7 architecture
+   * early-stage porting for Busybox (linked to bionic) experiments
+   * Adjust memory constraints to fit high resolution display
+   * Introduce virtual touchscreen device on Beagleboard to satisfy more touch-driven applications
+   * experimental package management system
+
+== Beagle-donut-0x3 ==
+
+ * Release date: ???
+ * Changes:
+  * External GSM modem for functional Android Telephony/RIL (Issue #3, #43)
+  * Bluetooth OBEX/OPP/FTP support (Issue #49)
+  * Motion sensor support (Issue #50)
+  * Android theme selector (Issue #48)
+  * Ethernet support + USB OTG network (Issue #39)
+  * ARM NEON optimizations for PixelFlinger up to 5x speedup
+  * Flexible resolution support for Launcher (Issue #29)
+  * Camera / OpenCORE HAL migration to Donut (Issue #32, #34)
+  * Camera capture / recording fix (Issue #35, #40, #41)
+  * Mouse stability fix (Issue #26)
+  * Dalvik stability fix (Issue #25)
+  * elfcopy .debug section reordering (Issue #20)
+  * Dalvik VM from Eclair has been back-ported. CaffeineMarkEmbedded results up to 2.71x.
