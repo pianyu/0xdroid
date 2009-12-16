@@ -9,7 +9,7 @@
   * Motion sensor support (Issue #50)
   * Android theme selector (Issue #48)
   * Ethernet support + USB OTG network (Issue #38, Issue #39, Issue #44, Issue #53)
-  * Dalvik VM from Eclair has been back-ported. CaffeineMarkEmbedded results up to 2.71x. (Issue #56)
+  * Dalvik VM + JIT compiler for ARMv7. CaffeineMarkEmbedded results up to 2.71x. (Issue #56)
   * ARM NEON/SIMD optimizations for PixelFlinger up to 5x speedup (Issue #57)
   * Flexible resolution support for Launcher (Issue #29)
   * Camera / OpenCORE HAL migration to Donut (Issue #32, Issue #34)
