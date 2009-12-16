@@ -14,10 +14,12 @@
   * Flexible resolution support for Launcher (Issue #29)
   * Camera / OpenCORE HAL migration to Donut (Issue #32, Issue #34)
   * Camera capture / recording fix (Issue #35, Issue #40, Issue #41)
+  * Audio initialization cleanup (Issue #36)
+  * Fix signal strength issues with Linux Wireless Extension (Issue #28)
   * Mouse stability fix (Issue #26)
   * Dalvik stability fix (Issue #25)
   * elfcopy .debug section reordering (Issue #20)
-  * Fix signal strength issues with Linux Wireless Extension (Issue #28)
+
 
 == Beagle-cupcake-0x2 ==
 
