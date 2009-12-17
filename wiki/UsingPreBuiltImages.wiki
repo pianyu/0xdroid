@@ -1,4 +1,4 @@
-i#summary This page discusses using the pre-built 0xdroid images on Beagleboard quickly.
+#summary This page discusses using the pre-built 0xdroid images on Beagleboard quickly.
 
 = Introduction =
 
