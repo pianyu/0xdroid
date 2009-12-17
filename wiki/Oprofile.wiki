@@ -63,7 +63,7 @@ Using the script *external/oprofile/opimport_pull* to pull down samples and anal
 cd {Where you put 0xdroid}
 . build/envsetup.sh
 setpaths
-export OPROFILE_EVENTS_DIR=${PWD}/linux-x86/oprofile/
+export OPROFILE_EVENTS_DIR=${PWD}/prebuilt/linux-x86/oprofile/
 cd external/oprofile
 ./opimport_pull /tmp/beagle-cupcake-oprofile
 }}}
