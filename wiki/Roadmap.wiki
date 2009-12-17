@@ -2,7 +2,7 @@
 
 == Beagle-donut-0x3 ==
 
- * Release date: ???
+ * Release date: Dec 18, 2009
  * Changes:
   * External GSM modem for functional Android Telephony/RIL (Issue #3, Issue #43)
   * Bluetooth OBEX/OPP/FTP support (Issue #49)
