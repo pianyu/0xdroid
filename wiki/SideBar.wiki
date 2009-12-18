@@ -10,6 +10,6 @@
    * [USB_Networking Use USB Networking]
    * [boot_nand Boot from NAND Flash]
    * [Oprofile Profiling 0xdroid]
-   * [theme Launcher Theme]
+   * [LauncherTheme Launcher Theme]
 
  [http://code.google.com/p/0xdroid/w/list All wiki pages]
