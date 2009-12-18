@@ -13,7 +13,7 @@
   * Dalvik VM + JIT compiler for ARMv7. CaffeineMark Embedded results up to 2.7x speedup. (Issue #56)
   * ARM NEON/SIMD optimizations for PixelFlinger up to 5x speedup (Issue #57)
   * Camera / OpenCORE HAL migration to Donut (Issue #32, Issue #34)
-  * Camera capture / recording fix (Issue #35, Issue #40, Issue #41, Issue #45)
+  * Camera capture / recording fixes (Issue #35, Issue #40, Issue #41, Issue #45)
   * Audio initialization cleanup (Issue #36)
   * Fix signal strength issues with Linux Wireless Extension (Issue #28)
   * Mouse stability fix (Issue #26)
