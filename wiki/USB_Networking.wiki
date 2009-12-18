@@ -14,9 +14,7 @@ In other words: if your existing router and desktop have addresses 192.168.0.(so
 
 It is possible to use network-manager to automatically connect to the Beagleboard using udev. The process uses udev to run a script when the Beagleboard is plugged in.
 
-Depending on which boot loader your device is running it shows as usb0.
-
-The script uses the ip command to set the mac address of the usb network interface.
+Then, it will show as usb0 from Linux host side.  The script uses the 'ifconfig' command to set the mac address of the usb network interface.  Also, it invokes 'iptables' for NAT configurations.
 
 To begin, create /etc/udev/rules.d/80-beagleboard.rules : 
 {{{
