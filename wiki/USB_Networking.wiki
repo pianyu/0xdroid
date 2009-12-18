@@ -32,3 +32,16 @@ iptables -A POSTROUTING -t nat -j MASQUERADE -s 192.168.0.0/24
 echo 1 > /proc/sys/net/ipv4/ip_forward
 iptables -P FORWARD ACCEPT
 }}}
+
+
+= USB Ethernet Gadget with Windows HOST machine =
+
+If you have not done the setup required for Microsoft Window RNDIS configuration, then Host machine will prompt for USB new hardware found screen, go through the steps below to do the same, otherwise continue by skipping this step
+
+ * Select the Linux.inf as the driver "linux.inf".
+ * On the Windows PC, bring up Network Connections and look for the Device Name:
+   {{{
+Linux USB Ethernet/RNDIS Gadget. 
+   }}}
+ Right-mouse click for Properties. Scroll down to Internet Protocol (TCP/IP), select it, and press the Properties button.
+ * Select an IP address close to the one selected for the Beagleboard. It should be IP address of 192.168.0.200 and subnet mask of 255.255.255.0.
