@@ -26,7 +26,7 @@ Make sure that Beagleboard hardware is properly set up first.  Check wiki page [
  * Unplug SD card from the Beagleboard and reboot
  * Enjoy!
 
-Format SD card detail under GNU/Linux:
+Format SD card instructions under GNU/Linux:
  * insert the SD card, wait it been detected, say /dev/mmcblk0 
   * It may be different with different SD device, you can check it via "dmesg")
 {{{
