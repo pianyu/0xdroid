@@ -7,7 +7,7 @@
   * Version: beagle-donut-0x3
   * Date: Dec 18, 2009
   * Release Image:
-    *Rootfs image: [http://downloads.0xlab.org/release/beagle-donut-0x3/android-beagle.ubi android-beagle.ubi]
+    * Rootfs image: [http://downloads.0xlab.org/release/beagle-donut-0x3/android-beagle.ubi android-beagle.ubi]
     * Kernel image: [http://downloads.0xlab.org/release/beagle-donut-0x3/0xkernel-beagle.bin 0xkernel-beagle.bin]
     * MD5 sum: [http://downloads.0xlab.org/release/beagle-donut-0x3/md5sum.txt md5sum.txt]
 
