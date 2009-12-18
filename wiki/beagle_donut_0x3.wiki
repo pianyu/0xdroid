@@ -35,6 +35,7 @@
 
 == Related Documents ==
   * [http://code.google.com/p/0xdroid/wiki/USB_Networking USB_Networking]
+  * [http://code.google.com/p/0xdroid/wiki/LauncherTheme Launcher theme change]
 
 
 == Give us feedback ==
