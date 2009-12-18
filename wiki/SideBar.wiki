@@ -6,6 +6,7 @@
  * Information
    * [hardware_beagleboard Hardware: Beagleboard]
    * [MouseAction Mouse Action inside UI environment]
+   * [USB_Networking Use USB Networking]
    * [boot_nand Boot from NAND Flash]
    * [Oprofile Profiling 0xdroid]
 
