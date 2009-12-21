@@ -52,7 +52,8 @@
 
 
 == Give us feedback ==
-  * Join the [http://groups.google.com/group/0xlab-devel Developer mailing list]
+  * Join the [http://groups.google.com/group/0xlab-devel 0xlab Development mailing-list]
+  * Join the [http://groups.google.com/group/0xlab-discuss 0xlab General discussion mailing-list]
   * [http://code.google.com/p/0xdroid/issues Issue tracking]
 
  
