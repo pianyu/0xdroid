@@ -9,8 +9,8 @@ A theme includes images of Folder Icon, Bottom Bar, Handler and Wallpaper. Of co
 0xLab prepared a [http://0xdroid.googlecode.com/files/Theme_Christmas.apk Christmas Theme] for you. Lets use it for demonstration.
 
 {{{
-$wget http://0xdroid.googlecode.com/files/Theme_Christmas.apk    # Download Theme
-$adb push Theme_Christmas.apk /system/app    # Install Theme
+$ wget http://0xdroid.googlecode.com/files/Theme_Christmas.apk    # Download Theme
+$ adb push Theme_Christmas.apk /system/app    # Install Theme
 }}}
   * Click *Add Item* at BottomBar, choose *Theme Selector*
   [http://lh4.ggpht.com/_tBgWxrFmN1c/SytOC0qhBdI/AAAAAAAAD-Q/DTJRCFXI-aI/s800/theme_howto_1.png http://lh4.ggpht.com/_tBgWxrFmN1c/SytOC0qhBdI/AAAAAAAAD-Q/DTJRCFXI-aI/s800/theme_howto_1.png]
