@@ -21,3 +21,20 @@ CPU: Whetstones(10):    46905.0 KWIPS
 CPU: Himeno:    2.2440000772476196 
 CPU: Spectral Normalization:    1404.0 msec
 }}}
+
+== 3D Tests ==
+
+original donut on beagleboard
+{{{
+3d: Colored Cube: 64 fps
+3d: Lighting: 37 fps
+3d: Textures: 13 fps
+3d: Blending: 6 fps
+3d: Fog: 11 fps
+3d: Reflection: 13 fps
+3d: Multitexture: 8 fps
+3d: Teapot: 25 fps
+3d: Gears: 16 fps
+}}}
+
+beagle-donut-0x3
