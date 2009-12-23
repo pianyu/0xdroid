@@ -52,3 +52,32 @@ beagle-donut-0x3
 3d: Teapot: 25 fps
 3d: Gears: 18 fps
 }}}
+
+== 2D Tests ==
+
+original donut on beagle (without Software Cursor)
+{{{
+2d: Arcs:       138 fps
+2d: FillRate:   78 fps
+2d: Circles:    139 fps
+2d: Rectangles: 167 fps
+2d: Alpha:      61 fps
+}}}
+
+original donut on beagle + Software Cursor
+{{{
+2d: Arcs:       79 fps
+2d: FillRate:   106 fps
+2d: Circles:    103 fps
+2d: Rectangles: 101 fps
+2d: Alpha:      61 fps
+}}}
+
+beagle-donut-0x3 (+Software Cursor)
+{{{
+2d: Arcs:       94 fps
+2d: FillRate:   111 fps
+2d: Circles:    97 fps
+2d: Rectangles: 117 fps
+2d: Alpha:      61 fps
+}}}
