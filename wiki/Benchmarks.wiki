@@ -22,7 +22,9 @@ CPU: Himeno:    2.2440000772476196
 CPU: Spectral Normalization:    1404.0 msec
 }}}
 
-== 3D Tests ==
+== 3D Tests  ==
+
+Resolution: 1024x768
 
 original donut on beagleboard
 {{{
