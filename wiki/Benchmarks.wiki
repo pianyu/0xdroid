@@ -64,7 +64,7 @@ original donut on beagle (without Software Cursor)
 2d: Alpha:      61 fps
 }}}
 
-original donut on beagle + Software Cursor
+beagle-donut + Software Cursor
 {{{
 2d: Arcs:       79 fps
 2d: FillRate:   106 fps
@@ -73,7 +73,7 @@ original donut on beagle + Software Cursor
 2d: Alpha:      61 fps
 }}}
 
-beagle-donut-0x3 (+Software Cursor)
+beagle-donut-0x3 (+Software Cursor) + ARM NEON tweaks
 {{{
 2d: Arcs:       94 fps
 2d: FillRate:   111 fps
@@ -81,3 +81,5 @@ beagle-donut-0x3 (+Software Cursor)
 2d: Rectangles: 117 fps
 2d: Alpha:      61 fps
 }}}
+
+ * NOTE: continuous mouse surface tracking and update dramatically reduce the performance of simple 2D operations like Arcs, Circles, and Rectangles.  However, we need this feature to make Android environment usable.
