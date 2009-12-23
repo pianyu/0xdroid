@@ -73,7 +73,7 @@ beagle-donut + Software Cursor
 2d: Alpha:      61 fps
 }}}
 
-beagle-donut-0x3 (+Software Cursor) + ARM NEON tweaks
+beagle-donut-0x3 (+Software Cursor)
 {{{
 2d: Arcs:       94 fps
 2d: FillRate:   111 fps
