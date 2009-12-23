@@ -2,7 +2,8 @@
 
 == Testing Environment ==
 
-Beagleboard (TI OMAP353x) runs at 500 MHz
+ * Beagleboard (TI OMAP353x) runs at 500 MHz
+ * Display resolution: 1024x768
 
 == CPU Tests ==
 
@@ -24,7 +25,7 @@ CPU: Spectral Normalization:    1404.0 msec
 
 == 3D Tests  ==
 
-Resolution: 1024x768
+ * Engine: libagl (software)
 
 original donut on beagleboard
 {{{
