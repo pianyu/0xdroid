@@ -41,13 +41,13 @@ original donut on beagleboard
 
 beagle-donut-0x3
 {{{
-3d: Colored Cube:       61 fps
-3d: Lighting:   39 fps
-3d: Textures:   15 fps
-3d: Blending:   8 fps
-3d: Fog:        13 fps
+3d: Colored Cube: 61 fps
+3d: Lighting: 39 fps
+3d: Textures: 15 fps
+3d: Blending: 8 fps
+3d: Fog: 13 fps
 3d: Reflection: 14 fps
-3d: Multitexture:       61 fps
-3d: Teapot:     25 fps
-3d: Gears:      18 fps
+3d: Multitexture: 61 fps
+3d: Teapot: 25 fps
+3d: Gears: 18 fps
 }}}
