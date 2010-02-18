@@ -10,6 +10,8 @@ You can fetch the pre-built images from [http://downloads.0xlab.org/release/ 0xd
  * Copy 'out/target/product/beagleboard/system.img' to 'android-beagle.ubi'
  * Copy 'arch/arm/boot/uImage' to '0xkernel-beagle.bin'
 
+NOTE: for newer Beagleboard (rev C4), you need to rename "uImage.bin" to uImage (on the SD card) for the default bootloader to pick it up.
+
 == Installation ==
 
 Make sure that Beagleboard hardware is properly set up first.  Check wiki page [hardware_beagleboard] in advance.  You can either use automated approach (for dummies) or go through the details (for geeks).
