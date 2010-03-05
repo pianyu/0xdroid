@@ -83,3 +83,76 @@ beagle-donut-0x3 (+Software Cursor)
 }}}
 
  * NOTE: continuous mouse surface tracking and update dramatically reduce the performance of simple 2D operations like Arcs, Circles, and Rectangles.  However, we need this feature to make Android environment usable.
+
+== Testing Environment ==
+
+ * Devkit8000 (TI OMAP353x)
+ * Display resolution: 272x480
+
+== CPU Tests ==
+
+beagle-donut + armv5-interp
+{{{
+CPU: Dhrystones:        39320.0 stones/sec
+CPU: Whetstones(10):    28225.0 KWIPS
+CPU: Himeno:    3.322999954223633
+CPU: Spectral Normalization:    1896.0 msec
+}}}
+
+beagle-donut + armv7-jit
+{{{
+CPU: Dhrystones:        56398.0 stones/sec
+CPU: Whetstones(10):    47741.0 KWIPS
+CPU: Himeno:    2.1570000648498535
+CPU: Spectral Normalization:    1257.0 msec
+}}}
+
+== 3D Tests  ==
+
+beagle-donut-0x3 (without Software Cursor)
+{{{
+3d: Colored Cube:       67 fps
+3d: Lighting:   67 fps
+3d: Textures:   45 fps
+3d: Blending:   20 fps
+3d: Fog:        40 fps
+3d: Reflection: 61 fps
+3d: Multitexture:       67 fps
+3d: Teapot:     44 fps
+3d: Gears:      67 fps
+}}}
+
+beagle-donut-0x3
+{{{
+3d: Colored Cube:       67 fps
+3d: Lighting:   67 fps
+3d: Textures:   44 fps
+3d: Blending:   24 fps
+3d: Fog:        38 fps
+3d: Reflection: 62 fps
+3d: Multitexture:       67 fps
+3d: Teapot:     44 fps
+3d: Gears:      67 fps
+}}}
+
+== 2D Tests ==
+
+beagle-donut-0x3 (without Software Cursor)
+{{{
+2d: Arcs:       70 fps
+2d: FillRate:   78 fps
+2d: Circles:    69 fps
+2d: Rectangles: 69 fps
+2d: Alpha:      67 fps
+}}}
+
+beagle-donut-0x3
+{{{
+2d: Arcs:       70 fps
+2d: FillRate:   84 fps
+2d: Circles:    70 fps
+2d: Rectangles: 70 fps
+2d: Alpha:      67 fps
+}}}
+
+ * NOTE: It seems that extremely small screen doesn't encounter the evident performance drop problems comparing to the same software stack on XGA (1024x768).
