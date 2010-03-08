@@ -1,6 +1,6 @@
 #summary Reference Benchmark Results
 
-== Testing Environment ==
+= Testing Environment: Beagleboard =
 
  * Beagleboard (TI OMAP353x) runs at 500 MHz
  * Display resolution: 1024x768
@@ -84,7 +84,7 @@ beagle-donut-0x3 (+Software Cursor)
 
  * NOTE: continuous mouse surface tracking and update dramatically reduce the performance of simple 2D operations like Arcs, Circles, and Rectangles.  However, we need this feature to make Android environment usable.
 
-== Testing Environment ==
+= Testing Environment: Devkit8000 =
 
  * Devkit8000 (TI OMAP353x)
  * Display resolution: 272x480
