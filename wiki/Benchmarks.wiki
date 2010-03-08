@@ -107,6 +107,22 @@ CPU: Himeno:    2.1570000648498535
 CPU: Spectral Normalization:    1257.0 msec
 }}}
 
+beagle-eclair + armv5-interp
+{{{
+CPU: Dhrystones:        38192.0 stones/sec
+CPU: Whetstones(10):    28031.0 KWIPS
+CPU: Himeno:    3.256999969482422 
+CPU: Spectral Normalization:    1916.0 msec
+}}}
+
+beagle-eclair + armv7-jit
+{{{
+CPU: Dhrystones:        57487.0 stones/sec
+CPU: Whetstones(10):    46663.0 KWIPS
+CPU: Himeno:    2.384000062942505 
+CPU: Spectral Normalization:    1232.0 msec
+}}}
+
 == 3D Tests  ==
 
 beagle-donut-0x3 (without Software Cursor)
@@ -135,6 +151,19 @@ beagle-donut-0x3
 3d: Gears:      67 fps
 }}}
 
+beagle-eclair
+{{{
+3d: Colored Cube:       67 fps
+3d: Lighting:   67 fps
+3d: Textures:   35 fps
+3d: Blending:   17 fps
+3d: Fog:        31 fps
+3d: Reflection: 53 fps
+3d: Multitexture:       21 fps
+3d: Teapot:     42 fps
+3d: Gears:      66 fps
+}}}
+
 == 2D Tests ==
 
 beagle-donut-0x3 (without Software Cursor)
@@ -152,6 +181,15 @@ beagle-donut-0x3
 2d: FillRate:   84 fps
 2d: Circles:    70 fps
 2d: Rectangles: 70 fps
+2d: Alpha:      67 fps
+}}}
+
+beagle-eclair
+{{{
+2d: Arcs:       67 fps
+2d: FillRate:   72 fps
+2d: Circles:    69 fps
+2d: Rectangles: 67 fps
 2d: Alpha:      67 fps
 }}}
 
