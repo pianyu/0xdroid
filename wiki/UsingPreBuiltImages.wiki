@@ -82,5 +82,24 @@ sudo mkfs.vfat -n DISK_INSTALLER /dev/mmcblk0p1
 sudo mkfs.vfat -n DISK_INSTALLER /dev/sdb1
 }}}
 
+== Devkit8000 snapshot ==
+
+=== Obtain Prebult Images ===
+
+You can fetch the pre-built images from [http://downloads.0xlab.org/snapshot/ 0xdroid snapshot], then follow the instructions to install into Devkit8000 environment.
+
+=== Installation ===
+
+ * Prepare the SD card as described above. Then unzip the snapshot image onto the VFAT partition.
+{{{
+cd /media/sdb1
+unzip ~/0xdroid-devkit8k-donut.zip
+}}}
+ * Plug the SD card in Devkit8000 SD slot and restart it, if this is your first install, hold the BOOT_KEY.
+ * Wait until all the leds turned on, then the installation is finished.
+ * Remove the SD card and reboot.
+
+Note: If you hold the BOOT_KEY but cannot boot from SD, make sure the MLO file is the first file been copied to the VFAT partition.
+
 === for geeks ===
 Check wiki page [boot_nand] as reference. 
