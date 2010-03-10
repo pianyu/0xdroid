@@ -4,9 +4,9 @@
 
  * Release date: ?
  * Changes:
-  * Ecliar codebase (Issue #62, #66)
+  * Ecliar codebase (Issue #62, Issue #66)
   * New hardware: DevKit 8000
-  * Touchscreen support along with calibration UI (Issue #7, #59)
+  * Touchscreen support along with calibration UI (Issue #7, Issue #59)
   * Refined system image installer (Issue #60)
 
 == Beagle-donut-0x3 ==
