@@ -153,15 +153,16 @@ beagle-donut-0x3
 
 beagle-eclair
 {{{
-3d: Colored Cube:       67 fps
-3d: Lighting:   67 fps
-3d: Textures:   35 fps
-3d: Blending:   17 fps
-3d: Fog:        31 fps
-3d: Reflection: 53 fps
-3d: Multitexture:       21 fps
-3d: Teapot:     42 fps
-3d: Gears:      66 fps
+                  Eclair   Eclair-20100319
+3d: Colored Cube: 67 fps   67 fps
+3d: Lighting:     67 fps   67 fps
+3d: Textures:     35 fps   49 fps*
+3d: Blending:     17 fps   26 fps*
+3d: Fog:          31 fps   39 fps
+3d: Reflection:   53 fps   59 fps
+3d: Multitexture: 21 fps   68 fps*
+3d: Teapot:       42 fps   42 fps
+3d: Gears:        66 fps   66 fps
 }}}
 
 == 2D Tests ==
