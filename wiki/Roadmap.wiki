@@ -5,10 +5,11 @@
  * Release date: ?
  * Changes:
   * Ecliar codebase (Issue #62, Issue #66)
-  * New hardware: DevKit 8000
+  * New hardware: DevKit 8000 (Issue #74, Issue #77)
   * Touchscreen support along with calibration UI (Issue #7, Issue #59)
   * Refined system image installer (Issue #60, Issue #52)
-  * Small screen support (Issue #70)
+  * Small screen support (Issue #70, Issue #76)
+  * ARM optimized string operations (Issue #78)
 
 == Beagle-donut-0x3 ==
 
