@@ -1,0 +1,21 @@
+#summary Technology Review of 0xdroid Development Milestone
+
+= Introduction =
+
+Technology Review of each 0xdroid release goes here, following [Roadmap].
+
+
+== Beagle-eclair-0x4 ==
+
+== Beagle-cupcake-0x2 ==
+
+<wiki:video url="http://www.youtube.com/watch?v=ol9LWBKXXwQ"/>
+
+== Beagle-cupcake-0x1 ==
+
+<wiki:video url="http://www.youtube.com/watch?v=v6wdTOHrwQw"/>
+ * Fast boot time
+ * AzureWave AW-GH600 combo module (WLAN/Bluetooth/FM) integration
+ * High resolution HDMI display support
+ * Software mouse/cursor support
+ * ARMv7/NEON optimization
