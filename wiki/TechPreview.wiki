@@ -7,6 +7,23 @@ Technology Review of each 0xdroid release goes here, following [Roadmap].
 
 == Beagle-eclair-0x4 ==
 
+ * DevKit 8000 development board support
+   * Touchscreen support along with calibration UI
+ * New installer for Beagleboard/DevKit8000 + SD/MMC support
+ * 0xlab Launcher
+   * Changeable Launcher theme (0x3)
+   * Enable Launcher2 + Live Wallpaper
+ * Automated Testing Infrastructure (esuit + CTS)
+ * 3G modem support
+ * 3D Eye-candy Effects
+ * Performance Improvments
+   * Dalvik VM + JIT compiler for ARMv7 (0x3)
+   * ARM NEON/SIMD optimizations for PixelFlinger (0x3)
+   * libc tweaks for ARM
+ * Ethernet support + USB OTG network (0x3)
+ * Motion sensor support (0x3)
+
+ 
 == Beagle-cupcake-0x2 ==
 
 <wiki:video url="http://www.youtube.com/watch?v=ol9LWBKXXwQ"/>
@@ -16,6 +33,7 @@ Technology Review of each 0xdroid release goes here, following [Roadmap].
  * USB camera support
  * Audio playback and recording
  * Performance tweaked video playback
+
 
 == Beagle-cupcake-0x1 ==
 
