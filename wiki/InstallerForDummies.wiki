@@ -1,0 +1,39 @@
+#Description about the new installer
+
+= Introduction =
+
+The new 0xdroid installer supports install to NAND or to SD/MMC, and can fetch images from network. And the installation process is extremely simple: just extract the files into the SD card. 
+
+= Details =
+
+== Install to NAND ==
+
+=== Supported files ===
+
+  * 0xkernel-beagle.bin the kernel image
+  * android-beagle.bin the root file system image
+  * flash-uboot.bin the boot loader image
+
+== Install to SD/MMC ==
+
+Place a file *00_INSTALL_TO_SDCARD* into the SD card, then the installer will not overwrite the NAND instead of write to the SD card.
+
+***CAUTION*** The installer reformat the SD card if the partitions doesn't match the Android requirement. The reformat process might damage the existing data on the card.
+
+== Install from network ==
+
+Put the file *00_NET_INSTALL* into the SD card. This file must define following variables:
+{{{
+IFACE=usb0  #optional
+IPADDRESS=192.168.0.202
+REMOTE_UIMAGE=http://192.168.0.201:8000/0xkernel-beagle.bin
+REMOTE_ROOTFS=http://192.168.0.201:8000/android-beagle.ubi
+}}}
+
+The host side can setup the usb network on demand, for example, in Debian/Ubuntu system add the following lines to /etc/network/interfaces
+{{{
+allow-hotplug usb0
+iface usb0 inet static
+      address 192.168.0.201
+      netmask 255.255.255.0
+}}}
