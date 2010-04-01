@@ -8,6 +8,7 @@
   * Improve software graphics performance in Eclair (Issue #73)
   * New hardware: DevKit 8000 (Issue #72, Issue #74, Issue #77)
   * Touchscreen support along with calibration UI (Issue #7, Issue #59)
+  * 3G modem / Data card support (Issue #80)
   * Refined system image installer (Issue #60, Issue #52)
   * Small screen support (Issue #70)
   * ARM optimized string operations (Issue #78)
