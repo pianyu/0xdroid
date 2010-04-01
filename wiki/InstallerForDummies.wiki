@@ -2,6 +2,8 @@
 
 = Introduction =
 
+[http://downloads.0xlab.org/installer/dailybuild/uImage.bin Download]
+
 The new 0xdroid installer supports install to NAND or to SD/MMC, and can fetch images from network. And the installation process is extremely simple: just extract the files into the SD card. 
 
 = Details =
