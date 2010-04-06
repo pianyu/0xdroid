@@ -1,6 +1,6 @@
 = Our focus =
 
-The focus of this Wiki is to centralize 0xdroid specific information and how to get it running on the Beagleboard / TI OMAP3 derived boards.  The Wiki includes information on how to [UsingPreBuiltImages download and install 0xdroid], how to use specific parts (like the [MouseAction mouse actions] and [USB_Networking USB networking]), what features of the 0xdroid are currently functional and how you can contribute to improve the release.
+The focus of this Wiki is to centralize 0xdroid specific information and how to get it running on the Beagleboard / TI OMAP3 derived boards.  The Wiki includes information on how to [UsingPreBuiltImages download and install 0xdroid], how to use specific parts (like the [MouseAction mouse actions] and [USB_Networking USB networking]), what features of the 0xdroid are currently functional and how you can contribute to improve the releases.
 
 Browse through the menu section on your left to find those details you are looking for.
 
@@ -19,7 +19,7 @@ For detailed 0xdroid development roadmap and status, please check wiki page: [Ro
 
 = Get Involved =
 
- * Give feedbacks via IRC [http://webchat.freenode.net/?channels=0xlab #0xlab] or the 0xlab mailing list:
+ * Give feedbacks via IRC [http://webchat.freenode.net/?channels=0xlab #0xlab] or join the 0xlab mailing list:
    * General discussion: http://groups.google.com/group/0xlab-discuss
    * Technical / Development: http://groups.google.com/group/0xlab-devel 
  * If you find an issue or bug, please file a project issue: http://code.google.com/p/0xdroid/issues/list 
