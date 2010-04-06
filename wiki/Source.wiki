@@ -1,6 +1,6 @@
 #summary Getting Project Source Code
 
-Our project is hosted at http://gitorious.org/0xdroid. For a more complete set of instructions, see the [http://gitorious.org/0xdroid/pages/Build-from-Scratch Build From Scratch] wiki page.
+Our project is hosted at http://gitorious.org/0xdroid. Follow below steps, it shows how to set up the building environment, how to download 0xdroid source code and how to build-from-scratch.
 
 == Precondition: Sun JDK ==
 
@@ -13,14 +13,14 @@ deb-src http://us.archive.ubuntu.com/ubuntu/ karmic-updates multiverse
 }}}
 and install Sun JDK 1.5:
 {{{
-sudo apt-get update
-sudo apt-get install sun-java5-jdk
+$ sudo apt-get update
+$ sudo apt-get install sun-java5-jdk
 }}}
-To set the system to use Java 5 you need to update your java alternatives by running
+To set the system to use Java 5, you need to update your java alternatives by running
 {{{
 $ sudo update-alternatives --config java
 }}}
-Choose java-1.5.0-sun and you should be done.
+Choose java-1.5.0-sun and it should be done.
 
 == Precondition: git and repo ==
 
@@ -37,7 +37,7 @@ Getting repo:
 $ curl -o ~/bin/repo http://android.git.kernel.org/repo
 $ chmod a+x ~/bin/repo
 }}}
-You can find detailed repo installing instructions [http://source.android.com/download/using-repo here]
+For reference details about Repo, see [http://source.android.com/download/using-repo Using Repo and Git].
 
 == Get 0xdroid source ==
 
