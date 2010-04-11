@@ -45,9 +45,14 @@ Download the 0xdroid source code:
 {{{
 $ mkdir beagle-donut
 $ cd beagle-donut
-$ repo init -u git://gitorious.org/0xdroid/manifest.git -b beagle-donut
+$ repo init -u git://gitorious.org/0xdroid/manifest.git -b BRANCH_NAME
 $ repo sync
 }}}
+
+Where BRANCH_NAME is:
+ * beagle-eclair - for Eclair version of 0xdroid
+ * beagle-donut - for Donut version 0f 0xdroid
+ * beagle-cupcake - for Cupcake version of 0xdroid
 
 Alternatively, use faster git mirror if encountering the problem during 'repo sync':
 {{{
