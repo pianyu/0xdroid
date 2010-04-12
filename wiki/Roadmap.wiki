@@ -4,7 +4,7 @@
 
  * Release date: Apr ?, 2010
  * Changes:
-  * Ecliar codebase (Issue #62, Issue #66)
+  * Eclair codebase (Issue #62, Issue #66)
   * Improve software graphics performance in Eclair (Issue #73)
   * New hardware: DevKit 8000 (Issue #72, Issue #74, Issue #77)
   * Touchscreen support along with calibration UI (Issue #7, Issue #59)
