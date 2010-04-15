@@ -12,6 +12,7 @@
   * Refined system image installer (Issue #60, Issue #52)
   * Small screen support (Issue #70)
   * ARM optimized string operations (Issue #78)
+  * ARMv6 atomic operation improvement (Issue #88)
   * Merge skia ARMv6/ARMv7 optimization from QuIC (Issue #83)
   * Enable Launcher2 and LiveWallpaper on smaller size screen (Issue #76)
 
