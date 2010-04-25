@@ -2,7 +2,7 @@
 
 = Introduction =
 
-We provide the pre-built images and also come with a happy Installer. We can use the images and then get the newest Android in Beagleboard or Devkit8000. It would take only few minutes to achieve it. Besides these pre-buit images, we can [Source build from scratch] and gain the images too. There are a couple of ways to do this, primarily a NAND boot or an SD card boot.
+We provide the [http://downloads.0xlab.org/ pre-built images] and also come with a [http://www.youtube.com/watch?v=6E8aS6wxZV0 happy Installer]. We can use the images and then get the newest Android in Beagleboard or Devkit8000. It would take only few minutes to achieve it. Besides these pre-buit images, we can [Source build from scratch] and gain the images too. There are a couple of ways to do this, primarily a NAND boot or an SD card boot.
 
 == Obtain Prebult Images ==
 
