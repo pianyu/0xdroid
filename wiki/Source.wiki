@@ -93,3 +93,17 @@ $ make ARCH=arm omap3_beagle_defconfig
 $ make ARCH=arm CROSS_COMPILE=../beagle-donut/prebuilt/linux-x86/toolchain/arm-android-eabi-4.4.1/bin/arm-android-eabi- uImage
 $ make ARCH=arm CROSS_COMPILE=../beagle-donut/prebuilt/linux-x86/toolchain/arm-android-eabi-4.4.1/bin/arm-android-eabi- modules
 }}}
+
+== Flash images to target ==
+
+After this long building process, we should get our own Android kernel and system images. Then we can use [http://www.youtube.com/watch?v=6E8aS6wxZV0 happy Installer] and then do a SD card booting. Here are the steps as below:
+
+ * Format the first partition over than 100MB with VFAT on a SD card. 
+ * Download the installer [http://downloads.0xlab.org/installer/ uImage.bin] 
+ * Rename out/target/product/beagleboard/system.img to android-beagle.ubi
+ * Rename arch/arm/boot/uImage to 0xkernel-beagle.bin
+ * Copy above three files into the first partition of SD/MMC card
+ * Plug the SD card in Beagle board SD slot and restart the Beagleboard
+ * Wait for UI installer over. The installer would perform NAND flashing and u-boot environment setup.
+ * Unplug SD card from the Beagleboard and reboot
+ * Enjoy!
