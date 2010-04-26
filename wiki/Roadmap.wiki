@@ -2,7 +2,7 @@
 
 == Beagle-eclair-0x4 ==
 
- * Release date: Apr ?, 2010
+ * Release date: Apr 25, 2010
  * Changes:
   * Eclair codebase (Issue #62, Issue #66)
   * Improve software graphics performance in Eclair (Issue #73)
