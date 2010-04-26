@@ -7,6 +7,7 @@ Technology Review of each 0xdroid release goes here, following [Roadmap].
 
 == Beagle-eclair-0x4 ==
 
+<wiki:video url="http://www.youtube.com/watch?v=OGpYk1p1UPI"/>
  * DevKit 8000 development board support
    * Touchscreen support along with calibration UI
  * New installer for Beagleboard/DevKit8000 + SD/MMC support
