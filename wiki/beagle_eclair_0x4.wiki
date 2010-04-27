@@ -7,7 +7,7 @@
 
 
  * Version: beagle-donut-0x3
- * Date: Dec 18, 2009
+ * Date: April 25, 2010
  * Release Image:
   * [http://downloads.0xlab.org/release/beagle-eclair-0x4/beagle-eclair-0x4.zip beagle-eclair-0x4.zip]
   * [http://downloads.0xlab.org/release/devkit8k-eclair-0x4/devkit8k-eclair-0x4.zip devkit8k-eclair-0x4.zip]
