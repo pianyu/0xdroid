@@ -65,7 +65,7 @@ boot
 
  * Format the first partition over than 100MB with VFAT on a SD card. 
  * Download the installer [http://downloads.0xlab.org/installer/ uImage.bin] 
- * Download 0xkernel-beagle.bin and android-beagle.ubi [UsingPrebuitImages#for dummies]
+ * Download 0xkernel-beagle.bin and android-beagle.ubi [http://downloads.0xlab.org/release/ release folder] 
  * Copy above three files into the first partition of SD/MMC card
  * Plug the SD card in Beagle board SD slot and restart the Beagleboard
  * Wait for UI installer over. The installer would perform NAND flashing and u-boot environment setup.
