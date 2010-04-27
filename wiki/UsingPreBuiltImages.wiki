@@ -2,19 +2,38 @@
 
 = Introduction =
 
-We provide the [http://downloads.0xlab.org/ pre-built images] and also come with a [http://www.youtube.com/watch?v=6E8aS6wxZV0 happy Installer]. We can use the images and then get the newest Android in Beagleboard or Devkit8000. It would take only few minutes to achieve it. Besides these pre-buit images, we can [Source build from scratch] and gain the images too. There are a couple of ways to do this, primarily a NAND boot or an SD card boot.
+We provide the [http://downloads.0xlab.org/ pre-built images] and also come with a [http://www.youtube.com/watch?v=6E8aS6wxZV0 happy Installer]. We can use the images and then get the newest Android in Beagleboard or Devkit8000. It would take only few minutes to achieve it. Besides these pre-buit images, we can [Source build from scratch] and gain the images too. 
 
 == Obtain Prebult Images ==
 
-You can fetch the pre-built images from [http://downloads.0xlab.org/release/ 0xdroid  official release] or the experimental [http://downloads.0xlab.org/dailybuild/ images built by daily-build host], then follow the instructions to install into Beagleboard/Devkit8000 environment. 
+There are two kinds of pre-built images. One is [http://downloads.0xlab.org/release/ official released images (stable)] and the other one is [http://downloads.0xlab.org/dailybuild/ daily build images (experimental)]. You can download the pre-built images from [http://downloads.0xlab.org/ 0xlab download website] and then follow the instructions to install into Beagleboard/Devkit8000 environment. 
 
-NOTE: for newer Beagleboard (rev C4), you need to rename "uImage.bin" to uImage (on the SD card) for the default bootloader to pick it up.
+*NOTE*: for newer Beagleboard (rev C4), you need to rename "uImage.bin" to uImage (on the SD card) for the default bootloader to pick it up. [http://groups.google.com/group/0xlab-devel/browse_thread/thread/00bf82f395d65b3a (naming problem)]
 
 == Installation ==
 
-Make sure that Beagleboard hardware is properly set up first.  Check wiki page [hardware_beagleboard] in advance.  You can either use automated approach from Installer or go through the details.
+Make sure that Beagleboard hardware is properly set up first.  Check wiki page [hardware_beagleboard] in advance.  You can either use automated approach from Installer  (for dummies)or go through the details (for geeks).
 
-== from 0xdroid release 0x4 ==
+=== for dummies ===
+
+|| || *[beagle_eclair_0x4 devkit8k-eclair-0x4]* || *[beagle_eclair_0x4 beagle-eclair-0x4]* || *[beagle-donut-0x3 beagle_donut_0x3]* || *beagle-cupcake-0x2* || *beagle-cupcake-0x1* ||
+|| Installer || [http://downloads.0xlab.org/release/devkit8k-eclair-0x4/devkit8k-eclair-0x4.zip devkit8k-eclair-0x4.zip] || [http://downloads.0xlab.org/release/beagle-eclair-0x4/beagle-eclair-0x4.zip beagle-eclair-0x4.zip] || [http://downloads.0xlab.org/installer/beagle-donut-0x3/uImage.bin uImage.bin] || [http://downloads.0xlab.org/installer/beagle-cupcake-0x2/uImage.bin uImage.bin] || [http://downloads.0xlab.org/installer/beagle-cupcake-0x1/uImage.bin uImage.bin] ||
+|| Kernel || [http://downloads.0xlab.org/release/devkit8k-eclair-0x4/devkit8k-eclair-0x4.zip devkit8k-eclair-0x4.zip] || [http://downloads.0xlab.org/release/beagle-eclair-0x4/beagle-eclair-0x4.zip beagle-eclair-0x4.zip] || [http://downloads.0xlab.org/release/beagle-donut-0x3/0xkernel-beagle.bin 0xkernel-beagle.bin] ||[http://downloads.0xlab.org/release/beagle-cupcake-0x2/0xkernel-beagle.bin 0xkernel-beagle.bin] || [http://downloads.0xlab.org/release/beagle-cupcake-0x1/0xkernel-beagle.bin 0xkernel-beagle.bin] ||
+|| System || [http://downloads.0xlab.org/release/devkit8k-eclair-0x4/devkit8k-eclair-0x4.zip devkit8k-eclair-0x4.zip] || [http://downloads.0xlab.org/release/beagle-eclair-0x4/beagle-eclair-0x4.zip beagle-eclair-0x4.zip] || [http://downloads.0xlab.org/release/beagle-donut-0x3/android-beagle.ubi android-beagle.ubi] || [http://downloads.0xlab.org/release/beagle-cupcake-0x2/0xkernel-beagle.bin 0xkernel-beagle.bin] || [http://downloads.0xlab.org/release/beagle-cupcake-0x1/0xkernel-beagle.bin 0xkernel-beagle.bin] ||
+
+
+== 0xdroid release 0x4 ==   
+
+
+=== Beagle board ===
+ * Format the first partition over than 100MB with VFAT on a SD card
+ * Download [http://downloads.0xlab.org/release/beagle-eclair-0x4/beagle-eclair-0x4.zip beagle-eclair-0x4.zip] file
+ * unzip beagle-eclair-0x4.zip, you will see three files
+ * Copy these three files into the first partition of SD/MMC card
+ * Plug the SD card in Beagle board SD slot and restart the Beagleboard
+ * Wait for UI installer over. The installer would perform NAND flashing and u-boot environment setup.
+ * Unplug SD card from the Beagleboard and reboot
+ * Enjoy!
 
 === Devkit8000 ===
 The stock bootloader uses a old machine id that does not match upstream registry. So new users have to reflash a newer bootloader.
@@ -43,6 +62,9 @@ boot
 These steps only have to do once. After the bootloader is updated, the subsequence re-install will be as simple as beagleboard.
 
 == 0xdroid release 0x1~0x3 ==
+
+=== Beagle board ===
+
  * Format the first partition over than 100MB with VFAT on a SD card. 
  * Download the installer [http://downloads.0xlab.org/installer/ uImage.bin] 
  * Download 0xkernel-beagle.bin and android-beagle.ubi from [http://downloads.0xlab.org/release/ release folder]
@@ -105,10 +127,6 @@ sudo mkfs.vfat -n DISK_INSTALLER /dev/mmcblk0p1
 {{{
 sudo mkfs.vfat -n DISK_INSTALLER /dev/sdb1
 }}}
-
-
-
-
 
 
 === for geeks ===
