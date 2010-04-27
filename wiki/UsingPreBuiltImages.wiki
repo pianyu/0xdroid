@@ -24,16 +24,14 @@ Make sure that Beagleboard hardware is properly set up first.  Check wiki page [
 
 == 0xdroid release 0x4 ==   
 
-
 === Beagle board ===
- * Format the first partition over than 100MB with VFAT on a SD card
- * Download [http://downloads.0xlab.org/release/beagle-eclair-0x4/beagle-eclair-0x4.zip beagle-eclair-0x4.zip] file
- * unzip beagle-eclair-0x4.zip, you will see three files
- * Copy all files into the first partition of SD/MMC card
- * Plug the SD card in Beagle board SD slot and restart the Beagleboard
- * Wait for UI installer over. The installer would perform NAND flashing and u-boot environment setup.
- * Unplug SD card from the Beagleboard and reboot
- * Enjoy!
+ * Format the first partition over than 100MB with VFAT on a SD card.
+ * Download the release archive beagle-eclair-0x4.zip
+ * unzip the archive into SD card first partition
+ * Plug the SD card in beagleboard SD slot and restart the beagleboard
+ * Wait for UI installer over
+ * Unplug the beagleboard and restart it
+ * Enjoy it
 
 === Devkit8000 ===
 The stock bootloader uses a old machine id that does not match upstream registry. So new users have to reflash a newer bootloader.
