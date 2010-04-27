@@ -59,7 +59,7 @@ boot
  * Wait until all the leds turned on, then the installation is finished.
  * Remove the SD card and reboot.
 
-These steps only have to do once. After the bootloader is updated, the subsequence re-install will be as simple as beagleboard.
+*NOTE*: These steps only have to do once. After the bootloader is updated, the subsequence re-install will be as simple as *beagleboard*.
 
 == 0xdroid release 0x1~0x3 ==
 
