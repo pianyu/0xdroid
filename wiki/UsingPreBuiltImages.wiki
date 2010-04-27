@@ -6,7 +6,7 @@ We provide the [http://downloads.0xlab.org/ pre-built images] and also come with
 
 == Obtain Prebult Images ==
 
-There are two kinds of pre-built images. One is [http://downloads.0xlab.org/release/ official released images (stable)] and the other one is [http://downloads.0xlab.org/dailybuild/ daily build images (experimental)]. You can download the pre-built images from [http://downloads.0xlab.org/ 0xlab download website] and then follow the instructions to install into Beagleboard/Devkit8000 environment. 
+There are two kinds of pre-built images. One is [http://downloads.0xlab.org/release/ official released images]  (stable) and the other one is [http://downloads.0xlab.org/dailybuild/ daily build images] (experimental). You can download the pre-built images from [http://downloads.0xlab.org/ 0xlab download website] and then follow the instructions to install into Beagleboard/Devkit8000 environment. 
 
 *NOTE*: for newer Beagleboard (rev C4), you need to rename "uImage.bin" to uImage (on the SD card) for the default bootloader to pick it up. [http://groups.google.com/group/0xlab-devel/browse_thread/thread/00bf82f395d65b3a (naming problem)]
 
