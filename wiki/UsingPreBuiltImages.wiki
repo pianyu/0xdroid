@@ -29,7 +29,7 @@ Make sure that Beagleboard hardware is properly set up first.  Check wiki page [
  * Format the first partition over than 100MB with VFAT on a SD card
  * Download [http://downloads.0xlab.org/release/beagle-eclair-0x4/beagle-eclair-0x4.zip beagle-eclair-0x4.zip] file
  * unzip beagle-eclair-0x4.zip, you will see three files
- * Copy these three files into the first partition of SD/MMC card
+ * Copy all files into the first partition of SD/MMC card
  * Plug the SD card in Beagle board SD slot and restart the Beagleboard
  * Wait for UI installer over. The installer would perform NAND flashing and u-boot environment setup.
  * Unplug SD card from the Beagleboard and reboot
