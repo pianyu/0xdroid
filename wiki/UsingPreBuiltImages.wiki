@@ -34,7 +34,7 @@ Make sure that Beagleboard hardware is properly set up first.  Check wiki page [
  * Enjoy it
 
 === Devkit8000 ===
-The stock bootloader uses a old machine id that does not match upstream registry. So new users have to reflash a newer bootloader.
+The stock bootloader uses a old machine id that does not match upstream registry. So new users have to reflash a newer bootloader. Also, make sure what size of panel you are using ! You probably need to edit *install.conf* file.
 
  * Prepare the SD card as described above. Then unzip the release image onto the VFAT partition.
 {{{
@@ -43,6 +43,7 @@ unzip ~/devkit8k-eclair-0x4.zip
 }}}
  * Download the [http://downloads.0xlab.org/release/devkit8k-eclair-0x4/flash-uboot.bin new bootloader] to the same partition.
  * Edit install.conf, uncomment the U_BOOT_IMAGE line.
+ * Edit install.conf, choose the correct size of panel. (7 inch or 4.3 inch)
  * Plug the SD card in Devkit8000 SD slot and restart it.
  * Enter the u-boot prompt, use the following command the chainload the new bootloader.
 {{{
