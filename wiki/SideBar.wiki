@@ -7,6 +7,7 @@
  * Information
    * [hardware_beagleboard Hardware: Beagleboard]
    * [MouseAction Mouse Action with UI]
+   * [EnhanceButton Menu Keys in Devkit8000]
    * [USB_Networking Use USB Networking]
    * [boot_nand Boot from NAND Flash]
    * [Oprofile Profiling 0xdroid]
