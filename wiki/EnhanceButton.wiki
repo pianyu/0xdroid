@@ -1,5 +1,4 @@
-# Add some key events for Devkit 8000.
-
+#summary Add some key events for Devkit 8000.
 0xdroid supports some key events in Devkit8000, since there is only LCD panel without some useful menu buttons. Here are the operations:
 
 || *Button action* || *0xdroid Reaction* ||
