@@ -90,6 +90,7 @@ $ git clone git://gitorious.org/0xlab-kernel/kernel.git
 $ cd kernel
 $ git checkout -b kernel_omap3 origin/omap3
 $ make ARCH=arm omap3_beagle_defconfig
+$ make ARCH=arm devkit8000_defconfig # build for devkit8000
 $ make ARCH=arm CROSS_COMPILE=../beagle-donut/prebuilt/linux-x86/toolchain/arm-android-eabi-4.4.1/bin/arm-android-eabi- uImage
 $ make ARCH=arm CROSS_COMPILE=../beagle-donut/prebuilt/linux-x86/toolchain/arm-android-eabi-4.4.1/bin/arm-android-eabi- modules
 }}}
