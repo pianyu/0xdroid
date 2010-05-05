@@ -1,4 +1,4 @@
-# how to configure installer
+#summary how to configure installer
 
 WIP
 
