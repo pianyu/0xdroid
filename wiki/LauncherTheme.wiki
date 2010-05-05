@@ -1,3 +1,4 @@
+#summary Launcher theme introduction
 = Introduction =
 
 0xLab improve the Launcher of Android. You may install many themes into system, pick up one theme then apply to Launcher to change look and feel.
