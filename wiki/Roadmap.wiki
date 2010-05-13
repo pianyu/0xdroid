@@ -5,9 +5,9 @@
  * Release date: ?
  * Changes:
   * Feature: new Bluetooth Extensions (Issue #102)
-　  * SPP(Serial Port Profile)
-　  * DUN(Dial-Up Network Profile)
-　  * HID(Human Interface Device Profile)
+　  * SPP (Serial Port Profile)
+　  * DUN (Dial-Up Network Profile)
+　  * HID (Human Interface Device Profile)
   * Feature: Make Launcher2 really usable (Issue #76)
   * Feature: Make Gallery3D workable by fixing PixelFlinger regressions (Issue #107)
   * Feature: Touchscreen Calibration shouldn't require reboot (Issue #94, Issue #99)
