@@ -5,6 +5,7 @@
  * Release date: ?
  * Changes:
   * Major Linux kernel upgrade: from 2.6.29 to 2.6.32 (issue tracked on http://code.google.com/p/0xlab-kernel/issues/list )
+  * Support Android USB gadget: adb and mass-storage (Issue #95)
   * Feature: new Bluetooth Extensions -- SPP, DUN, HID (Issue #102)
   * Feature: Make Launcher2 really usable (Issue #76)
   * Feature: Make Gallery3D workable by fixing PixelFlinger regressions (Issue #107)
