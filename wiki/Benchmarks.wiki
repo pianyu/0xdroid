@@ -195,3 +195,5 @@ beagle-eclair
 }}}
 
  * NOTE: It seems that extremely small screen doesn't encounter the evident performance drop problems comparing to the same software stack on XGA (1024x768).
+
+The 2D result is almost vsync bound.
