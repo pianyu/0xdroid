@@ -47,7 +47,7 @@ unzip ~/devkit8k-eclair-0x4.zip
  * Plug the SD card in Devkit8000 SD slot and restart it.
  * Enter the u-boot prompt, use the following command the chainload the new bootloader.
 {{{
-mmcinit
+mmcinit;mmc init
 fatload mmc 0 80300000 flash-uboot.bin
 go 80300000
 }}}
