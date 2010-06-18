@@ -1,0 +1,23 @@
+= How to setup Alsa on Beagleboard, Devkit8000 =
+
+TODO: Automate this.
+
+First enable the correct audio path
+
+{{{
+adb shell alsa_amixer set 'PredriveL Mux' DACL2
+adb shell alsa_amixer set 'PredriveR Mux' DACR2
+adb shell alsa_amixer set PreDriv 100 unmute
+}}}
+
+Then setup the volume
+
+{{{
+adb shell alsa_amixer set 'DAC2 Digital Fine' 100
+}}}
+
+More information can obtained from
+
+{{{
+adb shell alsa_amixer
+}}}
