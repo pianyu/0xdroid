@@ -56,8 +56,7 @@ Where BRANCH_NAME is:
 
 Alternatively, use faster git mirror if encountering the problem during 'repo sync':
 {{{
-$ repo init -u git://git.0xlab.org/manifest.git -b beagle-donut
-$ sed -i -e 's#git://gitorious.org/0xdroid/#git://git.0xlab.org/#' .repo/manifests/default.xml
+$ repo init -u git://gitorious.org/0xdroid/manifest.git -b BRANCH_NAME -m mirror.xml
 $ repo sync 
 }}}
 
