@@ -16,8 +16,10 @@
   * Bugfix: 0xdroid Installer reads configurations incorrectly. (Issue #98)
   * Bugfix: UI doesn't respond to KEY_MENU reported from kernel (Issue #91)
   * Bugfix: HOME key does not work (Issue #105)
-  * Bugfix: Pixelflinger Error while generating scanline (Issue #107)
   * Bugfix: KeyGuard blocks the whole screen in landscape mode (Issue #106)
+  * Bugfix: Gallery3D backgrounnd shadowed the thumbnail (Issue #111)
+  * Bugfix: MediaPlayer video/audio out of sync (Issue #123)
+  * Bugfix: Audio recording can't be successful as stopping the recording (Issue #127)
 
 == Beagle-eclair-0x4 ==
 
