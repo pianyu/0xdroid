@@ -18,7 +18,7 @@
   * Bugfix: HOME key does not work (Issue #105)
   * Bugfix: KeyGuard blocks the whole screen in landscape mode (Issue #106)
   * Bugfix: Gallery3D backgrounnd shadowed the thumbnail (Issue #111)
-  * Bugfix: MediaPlayer video/audio out of sync (Issue #123)
+  * Bugfix: MediaPlayer video/audio out of sync (Issue #123, Issue #124)
   * Bugfix: Audio recording can't be successful as stopping the recording (Issue #127)
   * Bugfix: Touchscreen calibration UI doesn't start at all (Issue #129)
 
