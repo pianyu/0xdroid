@@ -26,6 +26,7 @@
   * Bugfix: Apply Thumb2 optimizations to bionic (Issue #103)
   * Bugfix: ASTRO or video player can not play MP4 file (Issue #118)
   * Bugfix: Plug USB disk again after eject causes mount failed (Issue #120)
+  * Bugfix: Install to SD card failed (Issue #97)
 
 == Beagle-eclair-0x4 ==
 
