@@ -2,7 +2,7 @@
 
 == Beagle-eclair-0x5 ==
 
- * Release date: ?
+ * Release date: July ?, 2010
  * Changes:
   * Major Linux kernel upgrade: from 2.6.29 to 2.6.32 (issue tracked on http://code.google.com/p/0xlab-kernel/issues/list )
   * Support Android USB gadget: adb and mass-storage (Issue #95)
