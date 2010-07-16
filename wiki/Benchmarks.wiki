@@ -151,7 +151,7 @@ beagle-donut-0x3
 3d: Gears:      67 fps
 }}}
 
-beagle-eclair
+beagle-eclair-0x4
 {{{
                   Eclair   Eclair-20100319
 3d: Colored Cube: 67 fps   67 fps
@@ -185,7 +185,7 @@ beagle-donut-0x3
 2d: Alpha:      67 fps
 }}}
 
-beagle-eclair
+beagle-eclair-0x4
 {{{
 2d: Arcs:       67 fps
 2d: FillRate:   72 fps
