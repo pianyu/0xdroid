@@ -24,7 +24,6 @@
   * Bugfix: Audio recording can't be successful as stopping the recording (Issue #127)
   * Bugfix: Touchscreen calibration UI doesn't start at all (Issue #129)
   * Bugfix: Apply Thumb2 optimizations to bionic (Issue #103)
-  * Bugfix: ASTRO or video player can not play MP4 file (Issue #118)
   * Bugfix: Plug USB disk again after eject causes mount failed (Issue #120)
   * Bugfix: Install to SD card failed (Issue #97)
 
