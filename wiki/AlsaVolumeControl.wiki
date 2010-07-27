@@ -5,8 +5,14 @@ TODO: Automate this.
 First enable the correct audio path
 
 {{{
+# kernel 2.6.29
 adb shell alsa_amixer set 'PredriveL Mux' DACL2
 adb shell alsa_amixer set 'PredriveR Mux' DACR2
+# kernel 2.6.32
+adb shell alsa_amixer set 'PredriveR Mixer AudioR2' on
+adb shell alsa_amixer set 'PredriveL Mixer AudioL2' on
+}}}
+{{{
 adb shell alsa_amixer set PreDriv 100 unmute
 }}}
 
