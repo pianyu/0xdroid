@@ -5,6 +5,7 @@
  * Release date: July ?, 2010
  * Changes:
   * Feature: Major Linux kernel upgrade: from 2.6.29 to 2.6.32 (issue tracked on [http://code.google.com/p/0xlab-kernel/issues/list 0xlab-kernel])
+  * Feature: Support TI's Android PowerVR SGX (hardware 2D/3D engine)
   * Feature: Support Android USB gadget: adb and mass-storage (Issue #95)
     * Note: 0xdroid no longer support usbnet gadget driver.  Use adb or USB Ethernet instead.
   * Feature: new Bluetooth Extensions -- HID (Issue #102)
