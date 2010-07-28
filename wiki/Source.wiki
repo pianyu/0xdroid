@@ -93,8 +93,16 @@ $ cd ..
 $ git clone git://gitorious.org/0xlab-kernel/kernel.git
 $ cd kernel
 $ git checkout -b kernel_omap3 origin/omap3
+}}}
+Select proper default kernel configuration to match the machine.
+Beagleboard:
+{{{
 $ make ARCH=arm omap3_beagle_defconfig
+}}}
+or DevKit8000:
+{{{
 $ make ARCH=arm devkit8000_defconfig # build for devkit8000
+}}}
 $ make ARCH=arm CROSS_COMPILE=../beagle-eclair/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-android-eabi- uImage
 $ make ARCH=arm CROSS_COMPILE=../beagle-eclair/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-android-eabi- modules
 }}}
