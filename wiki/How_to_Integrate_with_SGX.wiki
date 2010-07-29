@@ -1,4 +1,4 @@
-#How_to_Integrate_with_SGX
+#summary This page discusses How to Integrate with SGX in 0xdroid project
 
 = Introduction =
 
