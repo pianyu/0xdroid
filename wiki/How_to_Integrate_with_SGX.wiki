@@ -1,0 +1,144 @@
+#How_to_Integrate_with_SGX
+
+= Introduction =
+
+The Graphics SDK (with the associated drivers) for the PowerVR SGX graphics core on OMAP35x supports several methods for sharing 2D images between OpenGL ES 1.1, 2.0, OpenVG and native OS windowing systems. The terminology and use of these various approaches for the SGX is difficult to discern from the standard documents that define them because the PowerVR implementation is not comprehensive and there are many issues in their application that dramatically affect performance.
+Those that are new to OpenGL ES might think that PixelBuffers, Texture Maps, Pixmaps and/or Frame Buffer Objects are interchangeable or compatible, but that is generally not true. These constructs have been defined over time as OpenGL has evolved and their intended uses and level of support on the SGX differ significantly. ([http://processors.wiki.ti.com/index.php/Render_to_Texture_with_OpenGL_ES#Introduction from its WiKi page])
+
+= Install the Android Graphics SGX SDK on Host Machine =
+
+==== Download the code ====
+{{{
+$ git clone git://gitorious.org/rowboat/ti_android_sgx_sdk.git
+}}}
+
+==== Execute the installer ====
+{{{
+$ cd ti_android_sgx_sdk
+$ ./OMAP35x_Android_Graphics_SDK_setuplinux_3_01_00_03.bin
+}}}
+
+==== Select the source install location ====
+{{{
+Where do you want to install TI OMAP35x/AM37x Android Graphics SDK?
+Example: [/home/user/OMAP35x_Android_Graphics_SDK_3_01_00_03] 
+
+Installing TI OMAP35x/AM37x Android Graphics SDK...
+Should see following directory structure
+
+0xlab@desktop:~/OMAP35x_Android_Graphics_SDK_3_01_00_03$ ls
+ANDROID_RN_3_01_00_03.pdf  GFX_Linux_KM   gfx_rel_es2.x_android  gfx_rel_es5.x_android  Makefile             Rules.make
+ANDROID_RN_3_01_00_03.txt  GFX_Linux_SDK  gfx_rel_es3.x_android  initrc.patch           Makefile.KM.Android  uninstall
+
+}}}
+
+==== Edit Rules.make to configure the SGX source build ====
+{{{
+$ vi Rules.make
+}}}
+
+{{{
+ # set home area HOME (relative location for all SDK operations)
+  HOME=INVALIDVAL
+  Example: HOME=/home/user/
+
+ # Path of Android Root FS*
+  ANDROID_ROOT=$(HOME)/INVALIDVAL
+  Example: ANDROID_ROOT=$(HOME)/beagle-eclair/out/target/product/beagleboard
+
+ # set toolchain root path for arm-eabi*
+  CSTOOL_DIR=INVALIDVAL
+  Example: CSTOOL_DIR=/home/user/beagle-eclair/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0
+
+ #set the kernel installation path*
+  KERNEL_INSTALL_DIR=$(HOME)/INVALIDVAL
+  Example: KERNEL_INSTALL_DIR=$(HOME)/kernel
+}}}
+
+==== disable some code as below ====
+{{{
+diff --git a/GFX_Linux_KM/services4/system/omap3/sysutils_linux.c b/GFX_Linux_KM/services4/system/omap3/sysutils_linux.c
+index 8ce39c1..84dca3d 100755
+--- a/GFX_Linux_KM/services4/system/omap3/sysutils_linux.c
++++ b/GFX_Linux_KM/services4/system/omap3/sysutils_linux.c
+@@ -65,6 +65,7 @@ static PVRSRV_ERROR ForceMaxSGXClocks(SYS_SPECIFIC_DATA *psSysSpecData)
+ {
+        PVR_UNREFERENCED_PARAMETER(psSysSpecData);
+ 
++#if 0
+        /* Pin the memory bus bw to the highest value according to CORE_REV */
+ #if defined(SGX530) && (SGX_CORE_REV == 125)
+        if(cpu_is_omap3630())
+@@ -72,6 +73,7 @@ static PVRSRV_ERROR ForceMaxSGXClocks(SYS_SPECIFIC_DATA *psSysSpecData)
+ #else
+        omap_pm_set_min_bus_tput(&gpsPVRLDMDev->dev, OCP_INITIATOR_AGENT, 664000);
+ #endif
++#endif
+        return PVRSRV_OK;
+ }
+ 
+@@ -291,7 +293,7 @@ IMG_VOID DisableSGXClocks(SYS_DATA *psSysData)
+                clk_disable(psSysSpecData->psSGX_FCK);
+        }
+ 
+-       omap_pm_set_min_bus_tput(&gpsPVRLDMDev->dev, OCP_INITIATOR_AGENT, 0);
++       //omap_pm_set_min_bus_tput(&gpsPVRLDMDev->dev, OCP_INITIATOR_AGENT, 0);
+ 
+        atomic_set(&psSysSpecData->sSGXClocksEnabled, 0);
+ 
+diff --git a/Makefile.KM.Android b/Makefile.KM.Android
+index ba2e505..c427932 100755
+--- a/Makefile.KM.Android
++++ b/Makefile.KM.Android
+@@ -41,7 +41,7 @@ cleankernelmodule:
+                export EURASIAROOT=$(EURASIAROOT) && \
+                export DISCIMAGE=$(ANDROID_DISCIMAGE) && \
+                export ANDROID_ROOT=$(ANDROID_ROOT) && \
+-               export ANDROID_PRODUCT=zoom3 && \       
++               export ANDROID_PRODUCT=zoom3 && \
+                make -C $(GFX_KERNMOD_SRCPATH)/eurasiacon/build/linux/omap3630_android/kbuild KERNELDIR=$(KERNEL_INSTALL_DIR) clean
+
+}}}
+
+==== Build the Kernel Module sources ====
+{{{
+0xlab@desktop:~/OMAP35x_Android_Graphics_SDK_3_01_00_03$ make
+
+building the sgx kernel modules...
+copying the sgx kernel modules to appropriate folder...
+}}}
+
+
+==== Install the drivers in Target filesystem ====
+{{{
+0xlab@desktop:~/OMAP35x_Android_Graphics_SDK_3_01_00_03$ make install OMAPES=3.x
+
+Installing PowerVR Consumer/Embedded DDK 1.5.15.2766 on host
+
+File system installation root is /home/user/beagle-eclair/out/target/product/beagleboard/
+Installation complete!
+}}}
+
+* More details?! [http://code.google.com/p/rowboat/wiki/ConfigureAndBuild#Install_the_Android_Graphics_SGX_SDK_on_Host_Machine Check SGX WiKi page!] *
+
+
+
+= Build Android kernel and system image with SGX  =
+
+Follow [Source source] wiki page to get 0xdroid source code
+
+{{{
+$ mkdir beagle-eclair
+$ cd beagle-eclair
+$ repo init -u git://gitorious.org/0xdroid/manifest.git -b beagle-eclair
+$ repo sync
+}}}
+
+===  make sure few patches about SGX ===
+
+ * init.sgx.sh (a shell script to start SGX service)
+http://gitorious.org/0xdroid/system_core/commit/cf6db85b308be32f100f7b134d0c6350e5edc504.patch
+
+ * init.rc (put SGX service in init)
+
+http://gitorious.org/0xdroid/vendor_0xlab/commit/26ee500e459982eca381edbe1d47c38b8ed90cc4.patch
