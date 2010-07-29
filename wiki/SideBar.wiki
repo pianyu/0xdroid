@@ -4,6 +4,7 @@
  * [UsingPreBuiltImages Use Prebuilt Image]
  * [Get_Involved Get Involved]
  * [Roadmap Development Roadmap]
+ * [How_to_Integrate_with_SGX Android Graphics SGX]
  * Information
    * [hardware_beagleboard Hardware: Beagleboard]
    * [MouseAction Mouse Action with UI]
