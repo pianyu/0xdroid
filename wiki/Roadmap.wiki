@@ -2,7 +2,7 @@
 
 == Beagle-eclair-0x5 ==
 
- * Release date: July ?, 2010
+ * Release date: July 30, 2010
  * Changes:
   * Feature: Major Linux kernel upgrade: from 2.6.29 to 2.6.32 (issue tracked on [http://code.google.com/p/0xlab-kernel/issues/list 0xlab-kernel])
   * Feature: Support TI's Android PowerVR SGX (hardware 2D/3D engine)
