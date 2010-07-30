@@ -1,4 +1,5 @@
-# Release notes page for beagle-eclair-0x5 and devkit8k-eclair-0x5
+#summary This page discusses release notes for beagle-eclair-0x5, devkit8k-eclair-0x5
+#labels Releasenotes
 
 = Release Note: beagle-eclair-0x5, devkit8k-eclair-0x5 =
 
