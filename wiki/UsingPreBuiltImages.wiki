@@ -16,17 +16,21 @@ Make sure that Beagleboard hardware is properly set up first.  Check wiki page [
 
 === for dummies ===
 
+||  || *[beagle_eclair_0x5 beagle-eclair-0x5]* || *[beagle_eclair_0x5 devkit8k-eclair-0x5]* ||
+|| with SGX || [http://downloads.0xlab.org/release/beagle-eclair-0x5-sgx/beagle-eclair-0x5_sgx.zip beagle-eclair-0x5_sgx.zip] || [http://downloads.0xlab.org/release/devkit8k-eclair-0x5-sgx/devkit8k-eclair-0x5_sgx.zip devkit8k-eclair-0x5_sgx.zip] ||
+|| no SGX || [http://downloads.0xlab.org/release/beagle-eclair-0x5-no-sgx/beagle-eclair-0x5_no_sgx.zip beagle-eclair-0x5_no_sgx.zip] || [http://downloads.0xlab.org/release/devkit8k-eclair-0x5-no-sgx/devkit8k-eclair-0x5_no_sgx.zip devkit8k-eclair-0x5_no_sgx.zip] ||
+
 || || *[beagle_eclair_0x4 devkit8k-eclair-0x4]* || *[beagle_eclair_0x4 beagle-eclair-0x4]* || *[beagle_donut_0x3 beagle-donut-0x3]* || *beagle-cupcake-0x2* || *beagle-cupcake-0x1* ||
 || Installer || [http://downloads.0xlab.org/release/devkit8k-eclair-0x4/devkit8k-eclair-0x4.zip devkit8k-eclair-0x4.zip] || [http://downloads.0xlab.org/release/beagle-eclair-0x4/beagle-eclair-0x4.zip beagle-eclair-0x4.zip] || [http://downloads.0xlab.org/installer/beagle-donut-0x3/uImage.bin uImage.bin] || [http://downloads.0xlab.org/installer/beagle-cupcake-0x2/uImage.bin uImage.bin] || [http://downloads.0xlab.org/installer/beagle-cupcake-0x1/uImage.bin uImage.bin] ||
 || Kernel || [http://downloads.0xlab.org/release/devkit8k-eclair-0x4/devkit8k-eclair-0x4.zip devkit8k-eclair-0x4.zip] || [http://downloads.0xlab.org/release/beagle-eclair-0x4/beagle-eclair-0x4.zip beagle-eclair-0x4.zip] || [http://downloads.0xlab.org/release/beagle-donut-0x3/0xkernel-beagle.bin 0xkernel-beagle.bin] ||[http://downloads.0xlab.org/release/beagle-cupcake-0x2/0xkernel-beagle.bin 0xkernel-beagle.bin] || [http://downloads.0xlab.org/release/beagle-cupcake-0x1/0xkernel-beagle.bin 0xkernel-beagle.bin] ||
 || System || [http://downloads.0xlab.org/release/devkit8k-eclair-0x4/devkit8k-eclair-0x4.zip devkit8k-eclair-0x4.zip] || [http://downloads.0xlab.org/release/beagle-eclair-0x4/beagle-eclair-0x4.zip beagle-eclair-0x4.zip] || [http://downloads.0xlab.org/release/beagle-donut-0x3/android-beagle.ubi android-beagle.ubi] || [http://downloads.0xlab.org/release/beagle-cupcake-0x2/0xkernel-beagle.bin 0xkernel-beagle.bin] || [http://downloads.0xlab.org/release/beagle-cupcake-0x1/0xkernel-beagle.bin 0xkernel-beagle.bin] ||
 
 
-== 0xdroid release 0x4 ==   
+== 0xdroid release 0x4~0x5 ==   
 
 === Beagle board ===
  * Format the first partition over than 100MB with VFAT on a SD card.
- * Download the release archive beagle-eclair-0x4.zip
+ * Download the release archive beagle-eclair-0x?.zip  
  * unzip the archive into SD card first partition
  * Plug the SD card in beagleboard SD slot and restart the beagleboard
  * Wait for UI installer over
@@ -39,7 +43,7 @@ The stock bootloader uses a old machine id that does not match upstream registry
  * Prepare the SD card as described above. Then unzip the release image onto the VFAT partition.
 {{{
 cd /media/sdb1
-unzip ~/devkit8k-eclair-0x4.zip
+unzip ~/devkit8k-eclair-0x?.zip
 }}}
  * Download the [http://downloads.0xlab.org/release/devkit8k-eclair-0x4/flash-uboot.bin new bootloader] to the same partition.
  * Edit install.conf, uncomment the U_BOOT_IMAGE line.
