@@ -14,7 +14,7 @@ devkit8k-eclair-0x5-sgx, devkit8k-eclair-0x5-no-sgx
  * Date: July 30, 2010
  * Release Image:
   * [http://downloads.0xlab.org/release/beagle-eclair-0x5-no-sgx/beagle-eclair-0x5_no_sgx.zip beagle-eclair-0x5_no_sgx.zip]
-  * [http://downloads.0xlab.org/release/beagle-eclair-0x5-sgx/beagle-eclair-0x5_sgx.zip beagle-eclair-0x5_sgx.zipp]
+  * [http://downloads.0xlab.org/release/beagle-eclair-0x5-sgx/beagle-eclair-0x5_sgx.zip beagle-eclair-0x5_sgx.zip]
   * [http://downloads.0xlab.org/release/devkit8k-eclair-0x5-no-sgx/devkit8k-eclair-0x5_no_sgx.zip devkit8k-eclair-0x5_no_sgx.zip]
   * [http://downloads.0xlab.org/release/devkit8k-eclair-0x5-sgx/devkit8k-eclair-0x5_sgx.zip devkit8k-eclair-0x5_sgx.zip]
  * MD5 sum:
