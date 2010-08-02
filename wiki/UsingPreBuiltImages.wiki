@@ -40,7 +40,7 @@ Make sure that Beagleboard hardware is properly set up first.  Check wiki page [
 === Devkit8000 ===
 The stock bootloader uses a old machine id that does not match upstream registry. So new users have to reflash a newer bootloader. We provide some [EnhanceButton key events] for Android UI. Also, make sure what size of panel you are using ! You probably need to edit *[InstallConf install.conf]* file.
 
- * Prepare the SD card as described above. Then unzip the release image onto the VFAT partition.
+ * Prepare the SD card as described above. Then unzip the release image onto the *VFAT* partition.
 {{{
 cd /media/sdb1
 unzip ~/devkit8k-eclair-0x?.zip
