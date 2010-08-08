@@ -12,7 +12,7 @@ Those that are new to OpenGL ES might think that PixelBuffers, Texture Maps, Pix
 $ git clone git://gitorious.org/rowboat/ti_android_sgx_sdk.git
 }}}
 
-==== Execute the installer ====
+==== Execute the installer (quiet mode) ====
 {{{
 $ cd ti_android_sgx_sdk
 $ echo -e "Y\nY\nqY\n/tmp/sgx-dir\n" | DISPLAY=:9999 ./OMAP35x_Android_Graphics_SDK_setuplinux_3_01_00_03.bin
