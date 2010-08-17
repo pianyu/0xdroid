@@ -105,8 +105,8 @@ $ make ARCH=arm devkit8000_defconfig # build for devkit8000
 }}}
 Finally, build kernel image along with kernel modules:
 {{{
-$ make ARCH=arm CROSS_COMPILE=../beagle-eclair/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-android-eabi- uImage
-$ make ARCH=arm CROSS_COMPILE=../beagle-eclair/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-android-eabi- modules
+$ make ARCH=arm CROSS_COMPILE=../beagle-eclair/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-eabi- uImage
+$ make ARCH=arm CROSS_COMPILE=../beagle-eclair/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-eabi- modules
 }}}
 
 == Flash images to target ==
