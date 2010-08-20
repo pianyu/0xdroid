@@ -92,7 +92,7 @@ The instructions for building kernel image:
 $ cd ..
 $ git clone git://gitorious.org/0xlab-kernel/kernel.git
 $ cd kernel
-$ git checkout -b kernel_omap3 origin/omap3
+$ git checkout -b kernel_omap3 origin/omap3-2.6.32
 }}}
 Select proper default kernel configuration to match the machine.
 Beagleboard:
