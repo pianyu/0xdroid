@@ -32,14 +32,11 @@ For more detail, please reference our [http://code.google.com/p/0xdroid/wiki/Roa
 
 == How to build from scratch ==
 {{{
-  $ repo init -u git://gitorious.org/0xdroid/manifest.git -b beagle-eclair
+  $ repo init -u git://gitorious.org/0xdroid/manifest.git -b beagle-eclair -m beagle-eclair-0x4.xml
   $ echo "TARGET_PRODUCT := beagleboard" > buildspec.mk
   $ echo "TARGET_PRODUCT := devkit8000" > buildspec.mk ( if build for devkit8000 )
   $ echo "INSTALL_PREBUILT_DEMO_APKS := true" >> buildspec.mk ( optional for adding prebuilt demo apks )
-  $ cd .repo/manifests/
-  $ git checkout -b beagle-eclair-0x4-release beagle-eclair-0x4
   $ repo sync
-  $ repo forall -c "git checkout -b beagle-eclair-0x4-release beagle-eclair-0x4"
   $ make (or make -j4 if there are 4 cores)
 }}}
 
