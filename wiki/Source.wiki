@@ -64,11 +64,11 @@ $ repo sync
 
 Setup beagleboard specific configurations and enabled components:
 {{{
-$ echo "TARGET_PRODUCT := beagleboard” > buildspec.mk
-$ echo “INSTALL_PREBUILT_DEMO_APKS := true” >> buildspec.mk
+$ echo "TARGET_PRODUCT := beagleboard" > buildspec.mk
+$ echo "INSTALL_PREBUILT_DEMO_APKS := true" >> buildspec.mk
 }}}
 
-NOTE: If you want to build DevKit8000 instead of Beagleboard, replace the context "TARGET_PRODUCT := beagleboard” to "TARGET_PRODUCT := devkit8000”.
+NOTE: If you want to build DevKit8000 instead of Beagleboard, replace the context "TARGET_PRODUCT := beagleboard" to "TARGET_PRODUCT := devkit8000".
 
 Build as expected:
 {{{
