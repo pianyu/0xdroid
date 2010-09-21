@@ -72,19 +72,6 @@ index 8ce39c1..84dca3d 100755
 +       //omap_pm_set_min_bus_tput(&gpsPVRLDMDev->dev, OCP_INITIATOR_AGENT, 0);
  
         atomic_set(&psSysSpecData->sSGXClocksEnabled, 0);
- 
-diff --git a/Makefile.KM.Android b/Makefile.KM.Android
-index ba2e505..c427932 100755
---- a/Makefile.KM.Android
-+++ b/Makefile.KM.Android
-@@ -41,7 +41,7 @@ cleankernelmodule:
-                export EURASIAROOT=$(EURASIAROOT) && \
-                export DISCIMAGE=$(ANDROID_DISCIMAGE) && \
-                export ANDROID_ROOT=$(ANDROID_ROOT) && \
--               export ANDROID_PRODUCT=zoom3 && \       
-+               export ANDROID_PRODUCT=zoom3 && \
-                make -C $(GFX_KERNMOD_SRCPATH)/eurasiacon/build/linux/omap3630_android/kbuild KERNELDIR=$(KERNEL_INSTALL_DIR) clean
-
 }}}
 
 ==== Build the Kernel Module sources ====
