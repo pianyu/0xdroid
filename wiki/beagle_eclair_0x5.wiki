@@ -37,13 +37,13 @@ devkit8k-eclair-0x5-sgx, devkit8k-eclair-0x5-no-sgx
  * Feature: Robocat i2c port support
  * Feature: Improved libgralloc for non HW accelerated targets
 
-For more detail, please reference our [http://code.google.com/p/0xdroid/wiki/Roadmap roadmap and issues tracking]
+For more detail, please refer to our [http://code.google.com/p/0xdroid/wiki/Roadmap roadmap and issues tracking]
 
 == Where to download images ==
 You can grab the image from [http://downloads.0xlab.org/release/ here] and
 following the steps described on the wiki page to test the image.
 
-This release comes with [http://processors.wiki.ti.com/index.php/Render_to_Texture_with_OpenGL_ES#Introduction PowerVR SGX] from Texas Instruments. If you try both two images with SGX and without SGX, you would tell how amazing it displays photos in Gallery 3D application. Like ususal, it also comes with a happy Installer and it would bring you an Android Eclair system in few seconds. If you are looking for more details about the integration, you could reference to this [How_to_Integrate_with_SGX wiki] page. 
+This release comes with [http://processors.wiki.ti.com/index.php/Render_to_Texture_with_OpenGL_ES#Introduction PowerVR SGX] from Texas Instruments. If you try both two images with SGX and without SGX, you would tell how amazing it displays photos in Gallery 3D application. Like usual, it also comes with a happy Installer and it would bring you an Android Eclair system in few seconds. If you are looking for more details about the integration, you could refer to this [How_to_Integrate_with_SGX wiki] page. 
 
 == How to build from scratch ==
 {{{
