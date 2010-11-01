@@ -32,9 +32,9 @@ devkit8k-eclair-0x5-sgx, devkit8k-eclair-0x5-no-sgx
   Note: 0xdroid no longer support usbnet gadget driver. Use adb or USB Ethernet instead.
  * Feature: new Bluetooth Extensions -- HID
  * Feature: Make Launcher2 really usable
- * Feature: Make Gallery3D workable by fixing PixelFlinger? regressions
+ * Feature: Make Gallery3D workable by fixing PixelFlinger regressions
  * Feature: Touchscreen Calibration shouldn't require reboot
- * Feature: Robocat i2c port support
+ * Feature: [http://code.google.com/p/0xrobocat/ Robocat] i2c port support
  * Feature: Improved libgralloc for non HW accelerated targets
 
 For more detail, please refer to our [http://code.google.com/p/0xdroid/wiki/Roadmap roadmap and issues tracking]
