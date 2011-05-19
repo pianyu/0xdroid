@@ -1,5 +1,14 @@
 #summary This page contains the 0xdroid Roadmap
 
+== LEB-pandaboard ==
+
+ * Release date: June 1, 2011
+ * Summary: customized Linaro Evaluation Build for ARM Cortex-A8/A9
+ * Changes:
+   * Adapt optimization efforts from Linaro
+     * linaro toolchain, cortex-strings, etc.
+   * Generic graphics performance improvements
+
 == Beagle-eclair-0x5 ==
 
  * Release date: July 30, 2010
