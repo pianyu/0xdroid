@@ -5,6 +5,7 @@
  * Release date: June 1, 2011
  * Summary: customized Linaro Evaluation Build for ARM Cortex-A8/A9
  * Changes:
+   * Rebase Linaro Kernel tree for consolidation development
    * Adapt optimization efforts from Linaro
      * linaro toolchain, cortex-strings, etc.
    * Generic graphics performance improvements
