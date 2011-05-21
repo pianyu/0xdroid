@@ -9,6 +9,7 @@
    * Adapt optimization efforts from Linaro
      * linaro toolchain, cortex-strings, etc.
    * Generic graphics performance improvements
+   * zlib NEON improvement (Issue #161)
 
 == Beagle-eclair-0x5 ==
 
