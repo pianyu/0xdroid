@@ -12,6 +12,7 @@
    * zlib NEON improvement (Issue #161)
    * jpeg NEON improvement (issue #162)
    * Use tweaked ADWLauncher (Issue #163)
+   * Enable software cursor for Gingerbread (Issue #167)
 
 == Beagle-eclair-0x5 ==
 
