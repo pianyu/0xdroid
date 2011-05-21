@@ -7,7 +7,7 @@
  * Changes:
    * Rebase Linaro Kernel tree for consolidation development
    * Adapt optimization efforts from Linaro
-     * linaro toolchain (Issue #164), cortex-strings, etc.
+     * linaro toolchain (Issue #164), cortex-strings (Issue #165), etc.
    * Generic graphics performance improvements
    * zlib NEON improvement (Issue #161)
    * jpeg NEON improvement (issue #162)
