@@ -10,6 +10,7 @@
      * linaro toolchain, cortex-strings, etc.
    * Generic graphics performance improvements
    * zlib NEON improvement (Issue #161)
+   * jpeg NEON improvement (issue #162)
 
 == Beagle-eclair-0x5 ==
 
