@@ -11,6 +11,7 @@
    * Generic graphics performance improvements
    * zlib NEON improvement (Issue #161)
    * jpeg NEON improvement (issue #162)
+   * Use tweaked ADWLauncher (Issue #163)
 
 == Beagle-eclair-0x5 ==
 
