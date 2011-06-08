@@ -1,7 +1,7 @@
 = Release Note: 0x7-LEB-Gingerbread for Beagleboard-xM and Pandaboard =
 0xLab is glad to announce that we have new release of 0xdroid - 0x7. This release is based on LEB(Linaro Evaluation Build).
 
-[http://www.linaro.org/  Linaro] is a company which focus on software for ARM SoCs and has great effort to Open Source Software. Linaro distribute LEB which is tested, optimzed and benchmarked. Namely, LEB collects Linaro's effort on Android.
+[http://www.linaro.org/  Linaro] is a company which focus on software for ARM !SoCs and has great effort to Open Source Software. Linaro distribute LEB which is tested, optimzed and benchmarked. Namely, LEB collects Linaro's effort on Android.
 
 In this release, 0xLab made an attempt to merge our effort to LEB. We hope this release provides you both of improvements of 0xLab and Linaro.
 
@@ -43,7 +43,7 @@ To install prebuilt image to Sd Card, we use linaro-image-tool.[2]
  $ tar zxvf linaro-image-tools-0.4.5.tar.gz
  $ cd linaro-image-tools-0.4.5
 }}}
- * For beagleboard-xM
+ * For Beagleboard-xM
 {{{
  $ wget http://downloads.0xlab.org/release/0x7-leb-gingerbread-beaglexm/boot.tar.bz2
  $ wget http://downloads.0xlab.org/release/0x7-leb-gingerbread-beaglexm/system.tar.bz2
@@ -69,9 +69,84 @@ To install prebuilt image to Sd Card, we use linaro-image-tool.[2]
         insert the Sd Card to Beagleboard-xM/Pandaboard then power on, there you go.
 
 = Build from scratch =
-To build image from source code, just needs to finish these steps.
+Assume All your works are under *$HOME/0xdroid/*. To build image from source code, just needs to finish these steps.
  # Checkout source code
  # Build source code
  # Prepare Image tool
  # Install Image to sdcard
  # Insert sdcard and power on
+
+ * For Beagleboard-xM
+  # Checkout source code
+   * If you have AOSP under /path/to/aosp, use --reference to reuse existing object to speed up fetching.
+{{{
+repo init -u git@gitorious.org:0xdroid/manifest.git \
+--reference=/path/to/aosp/ -b leb-0xdroid -m LEB-beaglexm.xml
+}}}
+   * If you don't have AOSP
+{{{
+repo init -u git@gitorious.org:0xdroid/manifest.git -b leb-0xdroid -m LEB-beaglexm.xml
+}}}
+  # Build source code
+{{{
+$ echo "TARGET_PRODUCT=beagleboard" > buildspec.mk
+$ echo "TARGET_TOOLS=$HOME/0xdroid/prebuilt/linux-x86/toolchain/arm-eabi-4.5.4/bin/arm-eabi-">> buildspec.mk
+$ echo "TARGET_TOOLS_PREFIX=$HOME/0xdroid/prebuilt/linux-x86/toolchain/arm-eabi-4.5.4/bin/arm-eabi-" >> buildspec.mk
+$ echo "TARGET_SHELL=mksh" >> buildspec.mk
+$ make boottarball systemtarball userdatatarbal
+}}}
+  # Prepare Image tool
+{{{
+$ mkdir $HOME/0xdroid/lamc
+$ cd $HOME/0xdroid/lamc
+$ wget http://launchpad.net/linaro-image-tools/trunk/0.4.5/+download/linaro-image-tools-0.4.5.tar.gz
+$ tar zxvf linaro-image-tools-0.4.5.tar.gz
+}}}
+  # Install image to sdcard
+{{{
+$ cd $HOME/0xdroid/out/target/product/beagleboard
+$ sudo $HOME/0xdroid/lamc/linaro-image-tools-0.4.5/linaro-android-media-create \
+            --boot boot.tar.bz2 \
+            --system system.tar.bz2 \
+            --userdata userdata.tar.bz2 \
+            --dev beagle --mmc /dev/mmcblk0
+}}}
+ * For Pandaboard
+  # Checkout source code
+   * If you have AOSP under /path/to/aosp, use --reference to reuse existing object to speed up fetching.
+{{{
+repo init -u git@gitorious.org:0xdroid/manifest.git \
+--reference=/path/to/aosp/ -b leb-0xdroid -m LEB-panda.xml
+}}}
+   * If you don't have AOSP
+{{{
+repo init -u git@gitorious.org:0xdroid/manifest.git -b leb-0xdroid -m LEB-panda.xml
+}}}
+  # Build source code
+{{{
+$ echo "TARGET_PRODUCT=pandaboard" > buildspec.mk
+$ echo "TARGET_TOOLS=$HOME/0xdroid/prebuilt/linux-x86/toolchain/arm-eabi-4.5.4/bin/arm-eabi-">> buildspec.mk
+$ echo "TARGET_TOOLS_PREFIX=$HOME/0xdroid/prebuilt/linux-x86/toolchain/arm-eabi-4.5.4/bin/arm-eabi-" >> buildspec.mk
+$ echo "TARGET_SHELL=mksh" >> buildspec.mk
+$ make boottarball systemtarball userdatatarbal
+}}}
+  # Prepare Image tool
+{{{
+$ mkdir $HOME/0xdroid/lamc
+$ cd $HOME/0xdroid/lamc
+$ wget http://launchpad.net/linaro-image-tools/trunk/0.4.5/+download/linaro-image-tools-0.4.5.tar.gz
+$ tar zxvf linaro-image-tools-0.4.5.tar.gz
+}}}
+  # Install image to sdcard
+{{{
+$ cd $HOME/0xdroid/out/target/product/pandaboard
+$ sudo $HOME/0xdroid/lamc/linaro-image-tools-0.4.5/linaro-android-media-create \
+            --boot boot.tar.bz2 \
+            --system system.tar.bz2 \
+            --userdata userdata.tar.bz2 \
+            --dev panda --mmc /dev/mmcblk0
+}}}
+
+= Moreover =
+ * We use u-boot of rowboat for Beagleboard-xM since u-boot of Linaro is not bootable on Beagleboard-xM.
+ * Beagleboard-xM has two video output: HDMI and DVI. Please use DVI to use release 0x7.
