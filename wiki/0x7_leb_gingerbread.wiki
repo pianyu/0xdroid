@@ -35,7 +35,7 @@ It might be /dev/sdb, /dev/sdc or /dev/mmcblk0. Depends on your machine.
 {{{
  $ dmesg |tail
 }}}
-To install prebuilt image to Sd Card, we use linaro-image-tool.[2]
+To install prebuilt image to Sd Card, we use [http://launchpad.net/linaro-image-tools/ linaro-image-tool]
 {{{
  $ mkdir /tmp/image
  $ cd /tmp/image
