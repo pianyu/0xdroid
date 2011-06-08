@@ -13,7 +13,7 @@ In this release, 0xLab made an attempt to merge our effort to LEB. We hope this 
  * Enable Software cursor
  * Compute cursor dirty region aggressively
  * Replace Launcher2 with fast ADW.Launcher
- * Improve efficiency of SoftKeyboard
+ * Improve efficiency of !SoftKeyboard
  * Integrate zlib NEON improvements
  * Merge Linaro Cortex String Routines 0.1.1 into bionic
  * Include improvements of previous release
