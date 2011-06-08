@@ -1,0 +1,77 @@
+= Release Note: 0x7-LEB-Gingerbread for Beagleboard-xM and Pandaboard =
+0xLab is glad to announce that we have new release of 0xdroid - 0x7. This release is based on LEB(Linaro Evaluation Build).
+
+[http://www.linaro.org/  Linaro] is a company which focus on software for ARM SoCs and has great effort to Open Source Software. Linaro distribute LEB which is tested, optimzed and benchmarked. Namely, LEB collects Linaro's effort on Android.
+
+In this release, 0xLab made an attempt to merge our effort to LEB. We hope this release provides you both of improvements of 0xLab and Linaro.
+
+= Release Details =
+ * Date: 2011.06.08
+ * Codebase: Gingerbread
+ * Target Board: Pandaboard, Beagleboard-xM
+ * Rebase Kernel to 2.6.38
+ * Enable Software cursor
+ * Compute cursor dirty region aggressively
+ * Replace Launcher2 with fast ADW.Launcher
+ * Improve efficiency of SoftKeyboard
+ * Integrate zlib NEON improvements
+ * Merge Linaro Cortex String Routines 0.1.1 into bionic
+ * Include improvements of previous release
+
+= Where to Download =
+ In this release, we use Linaro Image Tool to install image to Sd Card. And this release supports two boards.
+ * Beagleboard
+  * [http://downloads.0xlab.org/release/0x7-leb-gingerbread-beaglexm/boot.tar.bz2 boot.tar.bz2]
+  * [http://downloads.0xlab.org/release/0x7-leb-gingerbread-beaglexm/system.tar.bz2 system.tar.bz2]
+  * [http://downloads.0xlab.org/release/0x7-leb-gingerbread-beaglexm/userdata.tar.bz2 userdata.tar.bz2]
+ * Pandaboard
+  * [http://downloads.0xlab.org/release/0x7-leb-gingerbread-pandaboard/boot.tar.bz2 boot.tar.bz2]
+  * [http://downloads.0xlab.org/release/0x7-leb-gingerbread-pandaboard/system.tar.bz2 system.tar.bz2]
+  * [http://downloads.0xlab.org/release/0x7-leb-gingerbread-pandaboard/userdata.tar.bz2 userdata.tar.bz2]
+
+= Intall Prebuilt Image =
+First, please insert your Sd Card and use dmesg to see its device file.
+It might be /dev/sdb, /dev/sdc or /dev/mmcblk0. Depends on your machine.
+{{{
+ $ dmesg |tail
+}}}
+To install prebuilt image to Sd Card, we use linaro-image-tool.[2]
+{{{
+ $ mkdir /tmp/image
+ $ cd /tmp/image
+ $ wget http://launchpad.net/linaro-image-tools/trunk/0.4.5/+download/linaro-image-tools-0.4.5.tar.gz
+ $ tar zxvf linaro-image-tools-0.4.5.tar.gz
+ $ cd linaro-image-tools-0.4.5
+}}}
+ * For beagleboard-xM
+{{{
+ $ wget http://downloads.0xlab.org/release/0x7-leb-gingerbread-beaglexm/boot.tar.bz2
+ $ wget http://downloads.0xlab.org/release/0x7-leb-gingerbread-beaglexm/system.tar.bz2
+ $ wget http://downloads.0xlab.org/release/0x7-leb-gingerbread-beaglexm/userdata.tar.bz2
+ $ sudo ./linaro-android-media-create \
+            --boot boot.tar.bz2 \
+            --system system.tar.bz2 \
+            --userdata userdata.tar.bz2 \
+            --dev beagle --mmc /dev/mmcblk0
+}}}
+ * For Pandaboard
+{{{
+ $ wget http://downloads.0xlab.org/release/0x7-leb-gingerbread-pandaboard/boot.tar.bz2
+ $ wget http://downloads.0xlab.org/release/0x7-leb-gingerbread-pandaboard/system.tar.bz2
+ $ wget http://downloads.0xlab.org/release/0x7-leb-gingerbread-pandaboard/userdata.tar.bz2
+ $ sudo ./linaro-android-media-create \
+            --boot boot.tar.bz2 \
+            --system system.tar.bz2 \
+            --userdata userdata.tar.bz2 \
+            --dev panda --mmc /dev/mmcblk0
+}}}
+        Note: The parameter of --mmc refer to device file of the Sd Card. Once the installation complete,
+        insert the Sd Card to Beagleboard-xM/Pandaboard then power on, there you go.
+
+= Build from scratch =
+To build image from source code, just needs to finish these steps.
+ # Checkout source code
+ # Build source code
+ # Prepare Image tool
+ # Install Image to sdcard
+ # Insert sdcard and power on
