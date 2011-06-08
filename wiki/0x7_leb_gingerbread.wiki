@@ -1,7 +1,7 @@
 = Release Note: 0x7-LEB-Gingerbread for Beagleboard-xM and Pandaboard =
-0xLab is glad to announce that we have new release of 0xdroid - 0x7. This release is based on LEB(Linaro Evaluation Build).
+0xLab is glad to announce that we have new release of 0xdroid - 0x7. This release is based on LEB (Linaro Evaluation Build).
 
-[http://www.linaro.org/  Linaro] is a company which focus on software for ARM !SoCs and has great effort to Open Source Software. Linaro distribute LEB which is tested, optimzed and benchmarked. Namely, LEB collects Linaro's effort on Android.
+[http://www.linaro.org/  Linaro] is a NFP (Not For Profit) organization that aims to make embedded open source development easier and faster.  Linaro distributes LEB which is tested, optimized and benchmarked. Namely, LEB collects Linaro's effort on Android.
 
 In this release, 0xLab made an attempt to merge our effort to LEB. We hope this release provides you both of improvements of 0xLab and Linaro.
 
