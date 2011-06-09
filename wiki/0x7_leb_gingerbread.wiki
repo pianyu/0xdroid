@@ -20,7 +20,8 @@ In this release, 0xLab made an attempt to merge our effort to LEB, which provide
  * skia: optimize blit routines
  * skia: Merge NEON optimizations from QuIC and ST-Ericsson
  * build: Use Linaro Toolchain for better code optimizations
- * zlib: Merge NEON improvements. Useful to APK manipulation
+ * libpng: Add ARM NEON optimization
+ * zlib: Merge NEON improvements. Useful to APK manipulation and PNG
  * libpixelflinger: Re-enable ARM NEON optimizations
  * bionic: Merge Linaro optimized ARM Cortex String Routines
  * bionic: Add optimized memcpy() and memset() for ARM Cortex A9
