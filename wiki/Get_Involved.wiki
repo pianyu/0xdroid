@@ -5,7 +5,7 @@ There are many ways to get involved with the 0xdroid project.
 == Check the activities at 0xlab ==
 
  * 0xlab website: http://0xlab.org/
- * Demo videos: http://www.youtube.com/channel/0xlab
+ * Demo videos: http://www.youtube.com/0xlab
 
 == Become an user of 0xdroid ==
 
