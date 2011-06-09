@@ -11,9 +11,19 @@
      * linaro toolchain (Issue #164), cortex-strings (Issue #165), etc.
    * Generic graphics performance improvements
    * zlib NEON improvement (Issue #161)
-   * jpeg NEON improvement (issue #162)
    * Use tweaked ADWLauncher (Issue #163)
    * Enable software cursor for Gingerbread (Issue #167)
+   * frameworks/base: Compute cursor dirty region aggressively
+   * libagl: Optimize matrix multiply using ARM VFP
+   * packages/apps: Replace Launcher2 with faster and powerful ADW.Launcher
+   * frameworks/base: Improve efficiency of SoftKeyboard
+   * webkit: Add optimizations done by QuIC: Adaptive request reordering, Memory Cache optimization, Efficient image caching
+   * skia: Switch from VFP back to fixed scalar based calculation for performance considerations
+   * skia: optimize blit routines
+   * skia: Merge NEON optimizations from QuIC and ST-Ericsson
+   * libpixelflinger: Re-enable ARM NEON optimizations
+   * bionic: Use ARMv6 instruction for handling byte order
+   * libcore: Optimize byte-swapped accesses. Known to bring better floating-point performance
 
 == Beagle-eclair-0x5 ==
 
