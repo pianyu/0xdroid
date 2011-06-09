@@ -1,22 +1,32 @@
 = Release Note: 0x7-LEB-Gingerbread for Beagleboard-xM and Pandaboard =
-0xLab is glad to announce that we have new release of 0xdroid - 0x7. This release is based on LEB (Linaro Evaluation Build).
+0xLab is glad to announce the availability of new 0xdroid release - version 0x7. This release is built upon the efforts of Linaro Evaluation Build (LEB) for Android.
 
-[http://www.linaro.org/  Linaro] is a NFP (Not For Profit) organization that aims to make embedded open source development easier and faster.  Linaro distributes LEB which is tested, optimized and benchmarked. Namely, LEB collects Linaro's effort on Android.
+[http://www.linaro.org/  Linaro] is a NFP (Not For Profit) organization that aims to make embedded open source development easier and faster.  Linaro distributes LEB which is tested, optimized and benchmarked.
 
-In this release, 0xLab made an attempt to merge our effort to LEB. We hope this release provides you both of improvements of 0xLab and Linaro.
+In this release, 0xLab made an attempt to merge our effort to LEB, which provides both improvements by 0xLab and Linaro.
 
 = Release Details =
  * Date: 2011.06.08
  * Codebase: Gingerbread
- * Target Board: Pandaboard, Beagleboard-xM
- * Rebase Kernel to 2.6.38
- * Enable Software cursor
- * Compute cursor dirty region aggressively
- * Replace Launcher2 with faster and powerful ADW.Launcher
- * Improve efficiency of !SoftKeyboard
- * Integrate zlib NEON improvements
- * Merge Linaro Cortex String Routines 0.1.1 into bionic
- * Include improvements of previous release
+ * Target Board: Pandaboard (ARM Cortex-A9), Beagleboard-xM (ARM Cortex-A8)
+ * Rebase kernel to Linaro 2.6.38
+ * frameworks/base: Enable Software cursor
+ * frameworks/base: Compute cursor dirty region aggressively
+ * libagl: Optimize matrix multiply using ARM VFP
+ * packages/apps: Replace Launcher2 with faster and powerful ADW.Launcher
+ * frameworks/base: Improve efficiency of !SoftKeyboard
+ * webkit: Add optimizations done by QuIC: Adaptive request reordering, Memory Cache optimization, Efficient image caching
+ * skia: Switch from VFP back to fixed scalar based calculation for performance considerations
+ * skia: optimize blit routines
+ * skia: Merge NEON optimizations from QuIC and ST-Ericsson
+ * build: Use Linaro Toolchain for better code optimizations
+ * zlib: Merge NEON improvements. Useful to APK manipulation
+ * libpixelflinger: Re-enable ARM NEON optimizations
+ * bionic: Merge Linaro optimized ARM Cortex String Routines
+ * bionic: Add optimized memcpy() and memset() for ARM Cortex A9
+ * bionic: Use ARMv6 instruction for handling byte order
+ * libcore: Optimize byte-swapped accesses.  Known to bring better floating-point performance
+ * Inherit the improvements from previous release
 
 = Where to Download =
  In this release, we use Linaro Image Tool to install image to Sd Card. And this release supports two boards.
