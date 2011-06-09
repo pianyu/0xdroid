@@ -6,8 +6,8 @@
 In this release, 0xLab made an attempt to merge our effort to LEB, which provides both improvements by 0xLab and Linaro.
 
 = Release Details =
- * Date: 2011.06.08
- * Codebase: Gingerbread
+ * Date: June 8, 2011
+ * Codebase: Android Gingerbread
  * Target Board: Pandaboard (ARM Cortex-A9), Beagleboard-xM (ARM Cortex-A8)
  * Rebase kernel to Linaro 2.6.38
  * frameworks/base: Enable Software cursor
