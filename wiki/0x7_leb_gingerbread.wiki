@@ -91,12 +91,12 @@ Assume All your works are under *$HOME/0xdroid/*. To build image from source cod
   # Checkout source code
    * If you have AOSP under /path/to/aosp, use --reference to reuse existing object to speed up fetching.
 {{{
-repo init -u git@gitorious.org:0xdroid/manifest.git \
+repo init -u git://gitorious.org/0xdroid/manifest.git \
 --reference=/path/to/aosp/ -b leb-0xdroid -m LEB-beaglexm.xml
 }}}
    * If you don't have AOSP
 {{{
-repo init -u git@gitorious.org:0xdroid/manifest.git -b leb-0xdroid -m LEB-beaglexm.xml
+repo init -u git://gitorious.org/0xdroid/manifest.git -b leb-0xdroid -m LEB-beaglexm.xml
 }}}
   # Build source code
 {{{
@@ -126,12 +126,12 @@ $ sudo $HOME/0xdroid/lamc/linaro-image-tools-0.4.5/linaro-android-media-create \
   # Checkout source code
    * If you have AOSP under /path/to/aosp, use --reference to reuse existing object to speed up fetching.
 {{{
-repo init -u git@gitorious.org:0xdroid/manifest.git \
+repo init -u git://gitorious.org/0xdroid/manifest.git \
 --reference=/path/to/aosp/ -b leb-0xdroid -m LEB-panda.xml
 }}}
    * If you don't have AOSP
 {{{
-repo init -u git@gitorious.org:0xdroid/manifest.git -b leb-0xdroid -m LEB-panda.xml
+repo init -u git://gitorious.org/0xdroid/manifest.git -b leb-0xdroid -m LEB-panda.xml
 }}}
   # Build source code
 {{{
