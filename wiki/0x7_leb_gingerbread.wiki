@@ -105,7 +105,7 @@ $ echo "TARGET_PRODUCT=beagleboard" > buildspec.mk
 $ echo "TARGET_TOOLS=$HOME/0xdroid/prebuilt/linux-x86/toolchain/arm-eabi-4.5.4/bin/arm-eabi-">> buildspec.mk
 $ echo "TARGET_TOOLS_PREFIX=$HOME/0xdroid/prebuilt/linux-x86/toolchain/arm-eabi-4.5.4/bin/arm-eabi-" >> buildspec.mk
 $ echo "TARGET_SHELL=mksh" >> buildspec.mk
-$ make boottarball systemtarball userdatatarbal
+$ make boottarball systemtarball userdatatarball
 }}}
   # Prepare Image tool (see [#Moreover] to install needed modules)
 {{{
@@ -140,7 +140,7 @@ $ echo "TARGET_PRODUCT=pandaboard" > buildspec.mk
 $ echo "TARGET_TOOLS=$HOME/0xdroid/prebuilt/linux-x86/toolchain/arm-eabi-4.5.4/bin/arm-eabi-">> buildspec.mk
 $ echo "TARGET_TOOLS_PREFIX=$HOME/0xdroid/prebuilt/linux-x86/toolchain/arm-eabi-4.5.4/bin/arm-eabi-" >> buildspec.mk
 $ echo "TARGET_SHELL=mksh" >> buildspec.mk
-$ make boottarball systemtarball userdatatarbal
+$ make boottarball systemtarball userdatatarball
 }}}
   # Prepare Image tool (see [#Moreover] to install needed modules)
 {{{
