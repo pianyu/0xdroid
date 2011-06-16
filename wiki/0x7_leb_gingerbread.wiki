@@ -1,3 +1,4 @@
+#labels Featured
 = Release Note: 0x7-LEB-Gingerbread for Beagleboard-xM and Pandaboard =
 0xLab is glad to announce the availability of new 0xdroid release - version 0x7. This release is built upon the efforts of Linaro Evaluation Build (LEB) for Android.
 
