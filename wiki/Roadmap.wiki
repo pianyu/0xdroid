@@ -4,7 +4,7 @@
 
  * Release date: June 8, 2011
  * Summary: customized Linaro Evaluation Build for ARM Cortex-A8/A9
- * Support both of Pandboard and Beagleboard-xM
+ * Target hardware: Pandaboard and Beagleboard-xM
  * Changes:
    * Rebase Linaro Kernel tree for consolidation development (Issue #166)
    * Adapt optimization efforts from Linaro
