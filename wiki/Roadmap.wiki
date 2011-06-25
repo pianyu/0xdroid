@@ -11,7 +11,7 @@
      * linaro toolchain (Issue #164), cortex-strings (Issue #165), etc.
    * Generic graphics performance improvements
    * zlib NEON improvement (Issue #161). Useful to APK manipulation and PNG
- * libpng: Add ARM NEON optimization
+   * libpng: Add ARM NEON optimization
    * Use tweaked ADWLauncher (Issue #163)
    * Enable software cursor for Gingerbread (Issue #167)
    * frameworks/base: Compute cursor dirty region aggressively
