@@ -159,6 +159,54 @@ $ sudo $HOME/0xdroid/lamc/linaro-image-tools-0.4.5/linaro-android-media-create \
             --dev panda --mmc /dev/mmcblk0
 }}}
 
+= Install Image Manually =
+Of course you can install image to Sd Card manually without Linaro Image Tool. Assume there are boot.tar.bz2, system.tar.bz2 and userdata.tar.bz2 under */tmp/image*. And the device file of your Sd Card is */dev/mmcblk0*
+
+|| *name* || *start,size,type*||
+|| boot ||63,270272,0x0C,`*`||
+|| system || 270337,524288,L||
+|| cache || 794624,524288,L ||
+||extended partition||1318912,-,E||
+||data on extended parition||1318913,1048576,L||
+||sdcard on extended partition ||2367489,-,L||
+
+ * Create partitions onto Sd Card according to previous table
+{{{
+echo -e "63,270272,0x0C,* \n270336,524288,L \n794624,524288,L \n1318912,-,E \n1318944,1048544,L \n2367520,-,L\
+" | sudo sfdisk --force -D -uS -H 128 -S 32 /dev/mmcblk0
+
+sudo mkfs.vfat -F 32 /dev/mmcblk0p1 -n boot
+sudo mkfs.ext4 /dev/mmcblk0p2 -L system
+sudo mkfs.ext4 /dev/mmcblk0p3 -L cache
+sudo mkfs.ext4 /dev/mmcblk0p5 -L userdata
+sudo mkfs.vfat -F 32 /dev/mmcblk0p6 -n sdcard
+}}}
+ * Mount and copy files to partitions
+{{{
+sudo mount /dev/mmcblk0p1 /tmp/image/boot
+sudo mount /dev/mmcblk0p2 /tmp/image/system
+sudo mount /dev/mmcblk0p5 /tmp/image/data
+
+sudo tar xvf boot.tar.bz2 -C /tmp/image
+sudo tar xvf system.tar.bz2 -C /tmp/image
+sudo tar xvf userdata.tar.bz2 -C /tmp/image
+sync
+}}}
+ * Generate boot script
+{{{
+echo "setenv bootcmd 'fatload mmc 0:1 0x80200000 uImage; fatload mmc 0:1 \
+0x81600000 uInitrd; bootm 0x80200000 0x81600000'" > boot.txt
+echo "setenv bootargs 'console=tty0 console=ttyO2,115200n8 rootwait ro earlyprintk \
+fixrtc nocompcache vram=32M omapfb.vram=0:8M mem=456M@0x80000000 \
+mem=512M@0xA0000000 init=/init androidboot.console=ttyO2 omapdss.def_disp=dvi \
+omapfb.mode=dvi:1280x720MR-24@60 consoleblank=0'" >> boot.txt
+echo "boot" >> boot.txt
+sudo cp boot.txt /tmp/image/boot/
+sudo mkimage -A arm -O linux -T script -C none -a 0 -e 0 -n 'boot script' -d /tmp/image/boot/boot.txt /tmp/image/boot/boot.scr
+sync
+sudo umount /tmp/image/boot/ /tmp/image/system/ /tmp/image/data/
+}}}
+
 = Moreover =
  * We use *u-boot* of rowboat for Beagleboard-xM since u-boot of Linaro is not bootable on Beagleboard-xM.
  * Beagleboard-xM has two video output: HDMI and DVI. Please use *DVI* to use release 0x7.
