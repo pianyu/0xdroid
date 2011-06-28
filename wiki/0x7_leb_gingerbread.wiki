@@ -47,7 +47,7 @@ It might be /dev/sdb, /dev/sdc or /dev/mmcblk0. Depends on your machine.
 {{{
  $ dmesg |tail
 }}}
-To install prebuilt image to Sd Card, we use [http://launchpad.net/linaro-image-tools/ linaro-image-tool] (see [#Moreover] to install needed modules)
+To install prebuilt image to Sd Card, we use [http://launchpad.net/linaro-image-tools/ linaro-image-tool] (see [#Moreover] to install needed modules. Or see [#Install_Image_Manually] if you don't want to use the tool)
 {{{
  $ mkdir /tmp/image
  $ cd /tmp/image
@@ -107,7 +107,7 @@ $ echo "TARGET_TOOLS_PREFIX=$HOME/0xdroid/prebuilt/linux-x86/toolchain/arm-eabi-
 $ echo "TARGET_SHELL=mksh" >> buildspec.mk
 $ make boottarball systemtarball userdatatarball
 }}}
-  # Prepare Image tool (see [#Moreover] to install needed modules)
+  # Prepare Image tool (see [#Moreover] to install needed modules. Or see [#Install_Image_Manually] if you don't want to use the tool)
 {{{
 $ mkdir $HOME/0xdroid/lamc
 $ cd $HOME/0xdroid/lamc
@@ -142,7 +142,7 @@ $ echo "TARGET_TOOLS_PREFIX=$HOME/0xdroid/prebuilt/linux-x86/toolchain/arm-eabi-
 $ echo "TARGET_SHELL=mksh" >> buildspec.mk
 $ make boottarball systemtarball userdatatarball
 }}}
-  # Prepare Image tool (see [#Moreover] to install needed modules)
+  # Prepare Image tool (see [#Moreover] to install needed modules. Or see [#Install_Image_Manually] if you don't want to use the tool)
 {{{
 $ mkdir $HOME/0xdroid/lamc
 $ cd $HOME/0xdroid/lamc
