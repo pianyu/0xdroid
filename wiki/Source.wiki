@@ -32,12 +32,12 @@ Getting git:
 {{{
 $ sudo apt-get install git-core
 }}}
-Getting repo:
+Getting repo: (make sure ~/bin is included in $PATH)
 {{{
-$ curl -o ~/bin/repo http://android.git.kernel.org/repo
+$ curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
 $ chmod a+x ~/bin/repo
 }}}
-For reference details about Repo, see [http://source.android.com/download/using-repo Using Repo and Git].
+For reference details about Repo, see [http://source.android.com/source/ Using Repo and Git].
 
 == Get 0xdroid source ==
 
