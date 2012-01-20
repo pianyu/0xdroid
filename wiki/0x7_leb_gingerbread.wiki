@@ -90,6 +90,11 @@ Assume All your works are under *$HOME/0xdroid/*. To build image from source cod
 
  * For Beagleboard-xM
   # Checkout source code
+   * Getting repo: (make sure ~/bin is included in $PATH)
+{{{
+$ curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
+$ chmod a+x ~/bin/repo
+}}}
    * If you have AOSP under /path/to/aosp, use --reference to reuse existing object to speed up fetching.
 {{{
 repo init -u git://gitorious.org/0xdroid/manifest.git \
@@ -125,6 +130,11 @@ $ sudo $HOME/0xdroid/lamc/linaro-image-tools-0.4.5/linaro-android-media-create \
 }}}
  * For Pandaboard
   # Checkout source code
+   * Getting repo: (make sure ~/bin is included in $PATH)
+{{{
+$ curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
+$ chmod a+x ~/bin/repo
+}}}
    * If you have AOSP under /path/to/aosp, use --reference to reuse existing object to speed up fetching.
 {{{
 repo init -u git://gitorious.org/0xdroid/manifest.git \
